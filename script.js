@@ -1,6 +1,6 @@
 // Presentation JavaScript
 let currentSlide = 1;
-const totalSlides = 20;
+const totalSlides = 22;
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
