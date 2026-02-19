@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter Presentation - Learn Flutter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/dart.min.js"></script>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Welcome -->
+        <section class="slide active" data-slide="1">
+            <div class="content">
+                <h1 class="title-animated">🚀 Welcome to Flutter</h1>
+                <p class="subtitle">Build Beautiful Apps Everywhere</p>
+                <div class="flutter-logo">
+                    <svg class="flutter-icon" viewBox="0 0 256 317" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="flutterGradient" x1="3.952%" y1="26.993%" x2="75.897%" y2="52.919%">
+                                <stop offset="0%" stop-color="#13B9FD"/>
+                                <stop offset="100%" stop-color="#0278D4"/>
+                            </linearGradient>
+                        </defs>
+                        <polygon fill="url(#flutterGradient)" points="157.666 0 0 157.666 48.8 206.5 255.5 0"/>
+                        <polygon fill="#02569B" fill-opacity="0.85" points="156.567 145.396 72.166 229.796 121.0 278.6 170.8 229.796 255.2 145.396"/>
+                        <polygon fill="#13B9FD" points="121.0 279.7 170.8 229.796 121.0 179.9"/>
+                    </svg>
+                </div>
+                <p class="intro-text">Your journey to cross-platform development starts here!</p>
+            </div>
+        </section>
+
+        <!-- Slide 2: What is Flutter? -->
+        <section class="slide" data-slide="2">
+            <div class="content">
+                <h1>📱 What is Flutter?</h1>
+                <div class="info-cards">
+                    <div class="card">
+                        <div class="card-icon">⚡</div>
+                        <h3>Fast Development</h3>
+                        <p>Hot reload helps you quickly experiment and build UIs</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🎨</div>
+                        <h3>Expressive UI</h3>
+                        <p>Beautiful, customizable widgets for stunning interfaces</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🌍</div>
+                        <h3>Cross-Platform</h3>
+                        <p>One codebase for iOS, Android, Web, and Desktop</p>
+                    </div>
+                </div>
+                <p class="highlight-text">Flutter is Google's UI toolkit for building natively compiled applications!</p>
+            </div>
+        </section>
+
+        <!-- Slide 3: Why Flutter? -->
+        <section class="slide" data-slide="3">
+            <div class="content">
+                <h1>💡 Why Choose Flutter?</h1>
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h3>Single Codebase</h3>
+                            <p>Write once, run everywhere - iOS, Android, Web, Desktop</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h3>Hot Reload</h3>
+                            <p>See changes instantly without losing app state</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h3>Rich Widget Library</h3>
+                            <p>Thousands of pre-built widgets for any design</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h3>High Performance</h3>
+                            <p>Compiled to native ARM code for optimal performance</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="check">✓</span>
+                        <div>
+                            <h3>Strong Community</h3>
+                            <p>Backed by Google with extensive documentation and support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Setup - Downloads -->
+        <section class="slide" data-slide="4">
+            <div class="content">
+                <h1>⚙️ Setting Up Flutter</h1>
+                <p class="section-subtitle">Download Required Tools</p>
+                <div class="download-grid">
+                    <div class="download-card">
+                        <div class="download-icon">💻</div>
+                        <h3>VS Code</h3>
+                        <p>Lightweight, powerful code editor</p>
+                        <button class="download-btn" onclick="downloadVSCode()">
+                            <span>Download VS Code</span>
+                            <span class="btn-icon">⬇</span>
+                        </button>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">📦</div>
+                        <h3>Flutter SDK</h3>
+                        <p>The Flutter development kit</p>
+                        <button class="download-btn" onclick="downloadFlutterSDK()">
+                            <span>Download Flutter SDK</span>
+                            <span class="btn-icon">⬇</span>
+                        </button>
+                    </div>
+                    <div class="download-card highlight-card">
+                        <div class="download-icon">🤖</div>
+                        <h3>Android SDK & Toolchain</h3>
+                        <p>Required for Android development</p>
+                        <button class="download-btn" onclick="downloadAndroidStudio()">
+                            <span>Option 1: Android Studio (Recommended)</span>
+                            <span class="btn-icon">⬇</span>
+                        </button>
+                        <button class="download-btn" onclick="downloadAndroidCmdTools()" style="margin-top: 10px; background: linear-gradient(135deg, #546E7A, #78909C);">
+                            <span>Option 2: Command-line Tools Only</span>
+                            <span class="btn-icon">⬇</span>
+                        </button>
+                        <p class="card-note">✓ Option 1: Easier, includes GUI, Emulator, JDK</p>
+                        <p class="card-note" style="background: rgba(120, 144, 156, 0.1);">⚙️ Option 2: Lightweight, manual setup</p>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">🔌</div>
+                        <h3>Flutter Extension</h3>
+                        <p>VS Code Flutter & Dart extensions</p>
+                        <button class="download-btn" onclick="openExtensions()">
+                            <span>Get Extensions</span>
+                            <span class="btn-icon">⬇</span>
+                        </button>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">🟢</div>
+                        <h3>Git (Optional)</h3>
+                        <p>Version control system</p>
+                        <button class="download-btn" onclick="downloadGit()">
+                            <span>Download Git</span>
+                            <span class="btn-icon">⬇</span>
+                        </button>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">☕</div>
+                        <h3>JDK (Optional)</h3>
+                        <p>Only if not using Android Studio</p>
+                        <button class="download-btn" onclick="downloadJDK()">
+                            <span>Download JDK 17</span>
+                            <span class="btn-icon">⬇</span>
+                        </button>
+                        <p class="card-note">ℹ️ Skip if Android Studio is installed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Installation Steps -->
+        <section class="slide" data-slide="5">
+            <div class="content">
+                <h1>🔧 Installation Steps</h1>
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Install VS Code</h3>
+                            <p>Download and install Visual Studio Code from the official website</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Extract Flutter SDK</h3>
+                            <p>Extract the Flutter SDK to a location (e.g., C:\src\flutter)</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Add to PATH (Windows)</h3>
+                            <div class="path-steps">
+                               
+                                <p style="margin-top: 15px;"><strong>Method 1: Using Search</strong></p>
+                                <ol class="detailed-steps">
+                                    <li>Press <kbd>Win</kbd> + <kbd>S</kbd> (or click search icon)</li>
+                                    <li>Type "environment variables" and press <kbd>Enter</kbd></li>
+                                    <li>Click "Edit the system environment variables"</li>
+                                    <li>Click "Environment Variables" button</li>
+                                    <li>Select "Path" under User variables → "Edit" → "New"</li>
+                                    <li>Add: <code class="inline-code">C:\src\flutter\bin</code> and click OK</li>
+                                </ol>
+                                <p style="margin-top: 15px;"><strong>Method 2: Using PowerShell (Quick)</strong></p>
+                                <button class="action-btn" onclick="copyPathCommand()">Copy PowerShell Command</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Setup Android SDK & Toolchain (For Android)</h3>
+                            <p style="margin-bottom: 12px;"><strong>Choose one option:</strong></p>
+                            
+                            <div style="background: rgba(66, 165, 245, 0.08); padding: 15px; border-radius: 8px; margin-bottom: 12px; border-left: 4px solid var(--primary-color);">
+                                <p style="margin: 0; font-weight: 600; color: var(--primary-color);">✅ Option A: Android Studio (Recommended)</p>
+                                <p style="margin: 8px 0 0 0; color: #666; font-size: 0.9rem;"><strong>Download & Install:</strong></p>
+                                <p style="margin: 4px 0 0 0; color: #666; font-size: 0.9rem;">• During install, check: "Android SDK", "Android SDK Platform", "Android Virtual Device"</p>
+                                
+                                <p style="margin: 12px 0 4px 0; color: #666; font-size: 0.9rem;"><strong>After Installation:</strong></p>
+                                <ol style="margin: 4px 0 0 20px; padding: 0; color: #666; font-size: 0.9rem;">
+                                    <li style="margin-bottom: 4px;">Open Android Studio → Click "More Actions" → "SDK Manager"</li>
+                                    <li style="margin-bottom: 4px;">SDK Platforms tab: Install latest Android API (e.g., Android 13/14 - API 33/34)</li>
+                                    <li style="margin-bottom: 4px;">SDK Tools tab: Ensure these are checked:
+                                        <ul style="margin: 4px 0 4px 20px; list-style: circle;">
+                                            <li>Android SDK Build-Tools</li>
+                                            <li>Android SDK Command-line Tools</li>
+                                            <li>Android SDK Platform-Tools</li>
+                                            <li>Android Emulator</li>
+                                        </ul>
+                                    </li>
+                                    <li style="margin-bottom: 4px;">Click "Apply" to download (~2GB)</li>
+                                    <li style="margin-bottom: 4px;">Run: <code class="inline-code">flutter doctor --android-licenses</code> (accept all)</li>
+                                </ol>
+                            </div>
+                            
+                            <div style="background: rgba(120, 144, 156, 0.08); padding: 15px; border-radius: 8px; border-left: 4px solid #78909C;">
+                                <p style="margin: 0; font-weight: 600; color: #546E7A;">⚙️ Option B: Command-line Tools Only</p>
+                                <p style="margin: 8px 0 0 0; color: #666; font-size: 0.9rem;">• Download SDK command-line tools (~100MB)</p>
+                                <p style="margin: 4px 0 0 0; color: #666; font-size: 0.9rem;">• Install JDK 17 separately</p>
+                                <p style="margin: 4px 0 0 0; color: #666; font-size: 0.9rem;">• Use <code class="inline-code">sdkmanager</code> to install required components</p>
+                                <p style="margin: 4px 0 0 0; color: #666; font-size: 0.9rem;">• ⚡ Lightweight (~500MB total vs ~3GB for Android Studio)</p>
+                            </div>
+                            <div style="margin-top: 12px; padding: 12px; background: #f5f5f5; border-radius: 6px;">
+                                <p style="margin: 0; font-size: 0.85rem; color: #555;"><strong>💡 Quick Setup for Option B:</strong></p>
+                                <pre style="margin: 8px 0 0 0; padding: 8px; background: #fff; border-radius: 4px; font-size: 0.8rem; overflow-x: auto;"><code># After extracting command-line tools to C:\Android\cmdline-tools:
+sdkmanager "platform-tools" "platforms;android-33" "build-tools;33.0.0" "emulator"
+# Accept licenses
+flutter doctor --android-licenses</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Verify Setup with Flutter Doctor</h3>
+                            <p>Open terminal and run: <code class="inline-code">flutter doctor</code></p>
+                            <button class="action-btn" onclick="copyCommand('flutter doctor')">Copy Command</button>
+                            <p style="margin-top: 8px; color: #666; font-size: 0.9rem;">📋 Check for green checkmarks next to:</p>
+                            <ul style="color: #666; font-size: 0.9rem; margin-top: 4px;">
+                                <li>Flutter (Channel stable)</li>
+                                <li>Android toolchain - develop for Android devices</li>
+                                <li>VS Code</li>
+                            </ul>
+                            <p style="margin-top: 8px; color: #666; font-size: 0.9rem;">⚠️ If you see issues, run <code class="inline-code">flutter doctor -v</code> for details</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h3>Install Extensions</h3>
+                            <p>Install Flutter and Dart extensions in VS Code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Creating Your First Project -->
+        <section class="slide" data-slide="6">
+            <div class="content">
+                <h1>🎨 Creating Your First Flutter Project</h1>
+                <div class="command-section">
+                    <h3>Using Command Line</h3>
+                    <div class="code-container">
+                        <pre><code class="language-bash"># Create a new Flutter project
+flutter create my_first_app
+
+# Navigate to project directory
+cd my_first_app
+
+# Run the app
+flutter run</code></pre>
+                        <button class="copy-btn-small" onclick="copyCommand('flutter create my_first_app')">Copy</button>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>Using VS Code</h3>
+                    <div class="vs-code-steps">
+                        <p>1. Open Command Palette (<code class="inline-code">Ctrl+Shift+P</code>)</p>
+                        <p>2. Type "Flutter: New Project"</p>
+                        <p>3. Select "Application"</p>
+                        <p>4. Choose a location and enter project name</p>
+                    </div>
+                </div>
+                <div class="project-structure">
+                    <h3>Project Structure</h3>
+                    <div class="folder-tree">
+                        <div class="folder">📁 my_first_app</div>
+                        <div class="folder indent">📁 lib (Your Dart code)</div>
+                        <div class="folder indent">📁 android (Android-specific)</div>
+                        <div class="folder indent">📁 ios (iOS-specific)</div>
+                        <div class="folder indent">📁 web (Web-specific)</div>
+                        <div class="folder indent">📄 pubspec.yaml (Dependencies)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Running Your Application -->
+        <section class="slide" data-slide="7">
+            <div class="content">
+                <h1>🚀 Running Your Application</h1>
+                <p class="section-subtitle">Test your app on emulator or physical device</p>
+                <div class="running-methods">
+                    <div class="code-container">
+                        <div class="code-header">
+                            <span>📱 Option 1: Using Physical Device (Recommended)</span>
+                            <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                        </div>
+                        <pre><code class="language-bash"># Step 1: Check connected devices
+flutter devices
+
+# Step 2: Run on connected device
+flutter run
+
+# Step 3: Run in release mode (faster)
+flutter run --release</code></pre>
+                        <div class="device-setup">
+                            <h3>🔧 Enable USB Debugging (Android)</h3>
+                            <div class="setup-steps">
+                                <div class="step-item">
+                                    <span class="step-number">1</span>
+                                    <div>
+                                        <strong>Enable Developer Mode</strong>
+                                        <p>Go to <code class="inline-code">Settings → About Phone</code></p>
+                                        <p>Tap <code class="inline-code">Build Number</code> 7 times</p>
+                                        <p class="note">✓ You'll see "You are now a developer!"</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">2</span>
+                                    <div>
+                                        <strong>Enable USB Debugging</strong>
+                                        <p>Go to <code class="inline-code">Settings → Developer Options</code></p>
+                                        <p>Toggle ON <code class="inline-code">USB Debugging</code></p>
+                                        <p class="note">✓ Accept the authorization prompt on your phone</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">3</span>
+                                    <div>
+                                        <strong>Connect & Verify</strong>
+                                        <p>Connect phone via USB cable</p>
+                                        <p>Run: <code class="inline-code">flutter devices</code></p>
+                                        <p class="note">✓ Your device should appear in the list</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 style="margin-top: 20px;">🍎 Enable Developer Mode (iOS)</h3>
+                            <div class="setup-steps">
+                                <div class="step-item">
+                                    <span class="step-number">1</span>
+                                    <div>
+                                        <strong>Trust Computer</strong>
+                                        <p>Connect iPhone/iPad via USB</p>
+                                        <p>Tap <code class="inline-code">Trust</code> on device popup</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">2</span>
+                                    <div>
+                                        <strong>Register Apple ID in Xcode</strong>
+                                        <p>Open Xcode → Preferences → Accounts</p>
+                                        <p>Add your Apple ID (free account works)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-container">
+                        <div class="code-header">
+                            <span>💻 Option 2: Using Emulator</span>
+                            <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                        </div>
+                        <pre><code class="language-bash"># Check available emulators
+flutter emulators
+
+# Launch a specific emulator
+flutter emulators --launch &lt;emulator_id&gt;
+
+# Run app on running emulator
+flutter run</code></pre>
+                        <div class="device-setup">
+                            <h3>🎮 Create Android Emulator</h3>
+                            <div class="setup-steps">
+                                <div class="step-item">
+                                    <span class="step-number">1</span>
+                                    <div>
+                                        <strong>Open Android Studio</strong>
+                                        <p>Click <code class="inline-code">Tools → Device Manager</code></p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">2</span>
+                                    <div>
+                                        <strong>Create Virtual Device</strong>
+                                        <p>Click <code class="inline-code">Create Device</code></p>
+                                        <p>Select device type (e.g., Pixel 6)</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">3</span>
+                                    <div>
+                                        <strong>Download System Image</strong>
+                                        <p>Choose Android version (API 33+ recommended)</p>
+                                        <p>Download and click <code class="inline-code">Finish</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 style="margin-top: 20px;">⚡ VS Code Quick Run</h3>
+                            <div class="setup-steps">
+                                <div class="step-item">
+                                    <span class="step-number">1</span>
+                                    <div>
+                                        <strong>Select Device</strong>
+                                        <p>Click device name in status bar (bottom-right)</p>
+                                        <p>Choose your device/emulator from list</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">2</span>
+                                    <div>
+                                        <strong>Start Debugging</strong>
+                                        <p>Press <code class="inline-code">F5</code> or click Run → Start Debugging</p>
+                                        <p class="note">✓ App will build and launch automatically!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Flutter Fundamentals -->
+        <section class="slide" data-slide="8">
+            <div class="content">
+                <h1>📚 Flutter Fundamentals</h1>
+                <div class="fundamentals-grid">
+                    <div class="fundamental-card">
+                        <h3>🧩 Everything is a Widget</h3>
+                        <p>In Flutter, UI elements are widgets. From a button to padding to layout - all widgets!</p>
+                    </div>
+                    <div class="fundamental-card">
+                        <h3>🌳 Widget Tree</h3>
+                        <p>Widgets are organized in a tree structure. Parent widgets contain child widgets.</p>
+                    </div>
+                    <div class="fundamental-card">
+                        <h3>🎯 Material & Cupertino</h3>
+                        <p>Built-in design systems for Android (Material) and iOS (Cupertino) styling.</p>
+                    </div>
+                    <div class="fundamental-card">
+                        <h3>⚡ Hot Reload</h3>
+                        <p>Make changes and see them instantly without restarting your app.</p>
+                    </div>
+                    <div class="fundamental-card">
+                        <h3>📦 Packages</h3>
+                        <p>pub.dev hosts thousands of packages to extend Flutter functionality.</p>
+                    </div>
+                    <div class="fundamental-card">
+                        <h3>🎨 Customization</h3>
+                        <p>Every widget is highly customizable with properties and styling options.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Stateless Widget -->
+        <section class="slide" data-slide="9">
+            <div class="content">
+                <h1>🗿 Stateless Widgets</h1>
+                <p class="section-subtitle">Widgets that don't change over time</p>
+                <div class="widget-explanation">
+                    <div class="explanation-box">
+                        <h3>What is a Stateless Widget?</h3>
+                        <p>A widget that describes part of the UI which doesn't depend on anything other than its configuration and the BuildContext.</p>
+                        <ul>
+                            <li>✓ Immutable (doesn't change)</li>
+                            <li>✓ No internal state</li>
+                            <li>✓ Rebuilds only when parent rebuilds</li>
+                            <li>✓ Examples: Text, Icon, Image</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Stateless Widget Example</span>
+                        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code class="language-dart">import 'package:flutter/material.dart';
+
+class MyGreetingWidget extends StatelessWidget {
+  final String name;
+
+  // Constructor
+  const MyGreetingWidget({Key? key, required this.name}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(16.0),
+      child: Text(
+        'Hello, $name!',
+        style: TextStyle(
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+          color: Colors.blue,
+        ),
+      ),
+    );
+  }
+}
+
+// Usage
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('Stateless Widget Demo')),
+        body: Center(
+          child: MyGreetingWidget(name: 'Flutter Developer'),
+        ),
+      ),
+    );
+  }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10: Stateful Widget -->
+        <section class="slide" data-slide="10">
+            <div class="content">
+                <h1>🔄 Stateful Widgets</h1>
+                <p class="section-subtitle">Widgets that can change dynamically</p>
+                <div class="widget-explanation">
+                    <div class="explanation-box">
+                        <h3>What is a Stateful Widget?</h3>
+                        <p>A widget that has mutable state which can change over time during the app's lifetime.</p>
+                        <ul>
+                            <li>✓ Can change appearance dynamically</li>
+                            <li>✓ Has internal state managed by State object</li>
+                            <li>✓ Use setState() to trigger rebuilds</li>
+                            <li>✓ Examples: Checkbox, TextField, Counter</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Stateful Widget Example - Counter</span>
+                        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code class="language-dart">import 'package:flutter/material.dart';
+
+class CounterWidget extends StatefulWidget {
+  const CounterWidget({Key? key}) : super(key: key);
+
+  @override
+  State&lt;CounterWidget&gt; createState() => _CounterWidgetState();
+}
+
+class _CounterWidgetState extends State&lt;CounterWidget&gt; {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      // This tells Flutter to rebuild with new state
+      _counter++;
+    });
+  }
+
+  void _decrementCounter() {
+    setState(() {
+      _counter--;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          'You clicked the button:',
+          style: TextStyle(fontSize: 20),
+        ),
+        Text(
+          '$_counter times',
+          style: TextStyle(
+            fontSize: 48,
+            fontWeight: FontWeight.bold,
+            color: Colors.blue,
+          ),
+        ),
+        SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: _decrementCounter,
+              child: Icon(Icons.remove),
+            ),
+            SizedBox(width: 20),
+            ElevatedButton(
+              onPressed: _incrementCounter,
+              child: Icon(Icons.add),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: Common Widgets - Layout -->
+        <section class="slide" data-slide="11">
+            <div class="content">
+                <h1>📐 Layout Widgets</h1>
+                <p class="section-subtitle">Click on a widget to see its code</p>
+                <div class="widget-explorer">
+                    <div class="widget-list">
+                        <div class="widget-item active" data-widget="container">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">📦</span>
+                                <div>
+                                    <h3>Container</h3>
+                                    <p>A box model widget</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item" data-widget="column">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">⬇️</span>
+                                <div>
+                                    <h3>Column</h3>
+                                    <p>Vertical layout</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item" data-widget="row">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">➡️</span>
+                                <div>
+                                    <h3>Row</h3>
+                                    <p>Horizontal layout</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item" data-widget="stack">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">🔲</span>
+                                <div>
+                                    <h3>Stack</h3>
+                                    <p>Overlapping widgets</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-code-display">
+                        <div class="code-display-header">
+                            <span id="layout-widget-name">Container</span>
+                            <button class="copy-code-btn" onclick="copyWidgetCode('layout')">Copy</button>
+                        </div>
+                        <div class="code-display-content">
+                            <pre id="layout-code-content"><code class="language-dart">Container(
+  width: 200,
+  height: 100,
+  padding: EdgeInsets.all(16),
+  margin: EdgeInsets.all(8),
+  decoration: BoxDecoration(
+    color: Colors.blue,
+    borderRadius: BorderRadius.circular(12),
+  ),
+  child: Text('Hello!'),
+)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 12: Common Widgets - UI Elements -->
+        <section class="slide" data-slide="12">
+            <div class="content">
+                <h1>🎨 UI Widgets</h1>
+                <p class="section-subtitle">Click on a widget to see its code</p>
+                <div class="widget-explorer">
+                    <div class="widget-list">
+                        <div class="widget-item active" data-widget="text">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">📝</span>
+                                <div>
+                                    <h3>Text</h3>
+                                    <p>Display text</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item" data-widget="image">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">🖼️</span>
+                                <div>
+                                    <h3>Image</h3>
+                                    <p>Display images</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item" data-widget="icon">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">⭐</span>
+                                <div>
+                                    <h3>Icon</h3>
+                                    <p>Material icons</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item" data-widget="card">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">🎴</span>
+                                <div>
+                                    <h3>Card</h3>
+                                    <p>Material card</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-code-display">
+                        <div class="code-display-header">
+                            <span id="ui-widget-name">Text</span>
+                            <button class="copy-code-btn" onclick="copyWidgetCode('ui')">Copy</button>
+                        </div>
+                        <div class="code-display-content">
+                            <pre id="ui-code-content"><code class="language-dart">Text(
+  'Hello Flutter!',
+  style: TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    color: Colors.blue,
+    letterSpacing: 2.0,
+  ),
+)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 13: Interactive Widgets -->
+        <section class="slide" data-slide="13">
+            <div class="content">
+                <h1>🎮 Interactive Widgets</h1>
+                <p class="section-subtitle">Click on a widget to see its code</p>
+                <div class="widget-explorer">
+                    <div class="widget-list">
+                        <div class="widget-item active" data-widget="button">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">🔘</span>
+                                <div>
+                                    <h3>ElevatedButton</h3>
+                                    <p>Material button</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item" data-widget="textfield">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">✏️</span>
+                                <div>
+                                    <h3>TextField</h3>
+                                    <p>Text input field</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item" data-widget="checkbox">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">☑️</span>
+                                <div>
+                                    <h3>Checkbox</h3>
+                                    <p>Checkable box</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item" data-widget="switch">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">🎚️</span>
+                                <div>
+                                    <h3>Switch</h3>
+                                    <p>Toggle switch</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-code-display">
+                        <div class="code-display-header">
+                            <span id="interactive-widget-name">ElevatedButton</span>
+                            <button class="copy-code-btn" onclick="copyWidgetCode('interactive')">Copy</button>
+                        </div>
+                        <div class="code-display-content">
+                            <pre id="interactive-code-content"><code class="language-dart">ElevatedButton(
+  onPressed: () {
+    print('Button pressed!');
+  },
+  style: ElevatedButton.styleFrom(
+    backgroundColor: Colors.blue,
+    padding: EdgeInsets.symmetric(
+      horizontal: 32,
+      vertical: 16,
+    ),
+  ),
+  child: Text('Click Me'),
+)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 14: ListView & GridView -->
+        <section class="slide" data-slide="14">
+            <div class="content">
+                <h1>📜 Scrollable Widgets</h1>
+                <div class="two-column-layout">
+                    <div class="column">
+                        <h3>ListView</h3>
+                        <p>Scrollable list of widgets</p>
+                        <div class="code-container">
+                            <pre><code class="language-dart">ListView(
+  children: [
+    ListTile(
+      leading: Icon(Icons.map),
+      title: Text('Map'),
+      subtitle: Text('View map'),
+      trailing: Icon(Icons.arrow_forward),
+      onTap: () {},
+    ),
+    ListTile(
+      leading: Icon(Icons.photo),
+      title: Text('Album'),
+    ),
+    ListTile(
+      leading: Icon(Icons.phone),
+      title: Text('Phone'),
+    ),
+  ],
+)
+
+// ListView.builder for dynamic lists
+ListView.builder(
+  itemCount: items.length,
+  itemBuilder: (context, index) {
+    return ListTile(
+      title: Text(items[index]),
+    );
+  },
+)</code></pre>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3>GridView</h3>
+                        <p>Scrollable grid layout</p>
+                        <div class="code-container">
+                            <pre><code class="language-dart">GridView.count(
+  crossAxisCount: 2,
+  crossAxisSpacing: 10,
+  mainAxisSpacing: 10,
+  padding: EdgeInsets.all(16),
+  children: [
+    Container(color: Colors.red),
+    Container(color: Colors.blue),
+    Container(color: Colors.green),
+    Container(color: Colors.yellow),
+  ],
+)
+
+// GridView.builder for dynamic grids
+GridView.builder(
+  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    crossAxisCount: 3,
+    childAspectRatio: 1.0,
+  ),
+  itemCount: items.length,
+  itemBuilder: (context, index) {
+    return Card(
+      child: Center(
+        child: Text('Item $index'),
+      ),
+    );
+  },
+)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 15: Navigation -->
+        <section class="slide" data-slide="15">
+            <div class="content">
+                <h1>🧭 Navigation</h1>
+                <p class="section-subtitle">Moving between screens</p>
+                <div class="navigation-methods">
+                    <div class="code-container">
+                        <div class="code-header">
+                            <span>📍 Setting Up Routes in main()</span>
+                            <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                        </div>
+                        <pre><code class="language-dart">void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Navigation',
+      // Set initial route
+      initialRoute: '/',
+      // Define all routes
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/profile': (context) => ProfileScreen(),
+        '/settings': (context) => SettingsScreen(),
+        '/details': (context) => DetailsScreen(),
+      },
+      // Handle unknown routes
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (context) => NotFoundScreen(),
+        );
+      },
+    );
+  }
+}
+
+// Usage in widgets
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Home')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                // Navigate using route name
+                Navigator.pushNamed(context, '/profile');
+              },
+              child: Text('Go to Profile'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/settings');
+              },
+              child: Text('Go to Settings'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}</code></pre>
+                    </div>
+                    <div class="code-container">
+                        <div class="code-header">
+                            <span>🔀 Passing Data Between Routes</span>
+                            <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                        </div>
+                        <pre><code class="language-dart">// Method 1: Pass data with pushNamed
+Navigator.pushNamed(
+  context,
+  '/details',
+  arguments: {'id': 123, 'name': 'John'},
+);
+
+// Receive data in target screen
+class DetailsScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // Extract arguments
+    final args = ModalRoute.of(context)!.settings.arguments 
+                 as Map<String, dynamic>;
+    
+    return Scaffold(
+      appBar: AppBar(title: Text('Details')),
+      body: Center(
+        child: Column(
+          children: [
+            Text('ID: ${args['id']}'),
+            Text('Name: ${args['name']}'),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// Method 2: Direct navigation with constructor
+class ProfileScreen extends StatelessWidget {
+  final String userId;
+  
+  ProfileScreen({required this.userId});
+  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Profile')),
+      body: Text('User ID: $userId'),
+    );
+  }
+}
+
+// Navigate with direct data passing
+Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) => ProfileScreen(userId: '12345'),
+  ),
+);</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 16: State Management Basics -->
+        <section class="slide" data-slide="16">
+            <div class="content">
+                <h1>🎯 State Management</h1>
+                <p class="section-subtitle">Click on a solution to see its implementation</p>
+                <div class="widget-explorer">
+                    <div class="widget-list">
+                        <div class="widget-item" data-widget="setstate">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">🔄</span>
+                                <div>
+                                    <h3>setState()</h3>
+                                    <p>Built-in for simple cases</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item active" data-widget="getx">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">⭐</span>
+                                <div>
+                                    <h3>GetX</h3>
+                                    <p>Lightweight & powerful</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item" data-widget="provider">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">📦</span>
+                                <div>
+                                    <h3>Provider</h3>
+                                    <p>Flutter team recommended</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item" data-widget="riverpod">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">🌊</span>
+                                <div>
+                                    <h3>Riverpod</h3>
+                                    <p>Modern & type-safe</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-item" data-widget="bloc">
+                            <div class="widget-item-header">
+                                <span class="widget-icon">🧱</span>
+                                <div>
+                                    <h3>BLoC</h3>
+                                    <p>Event-driven pattern</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-code-display">
+                        <div class="code-display-header">
+                            <span id="statemanagement-widget-name">GetX ⭐ RECOMMENDED</span>
+                            <button class="copy-code-btn" onclick="copyWidgetCode('statemanagement')">Copy</button>
+                        </div>
+                        <div class="code-display-content">
+                            <pre id="statemanagement-code-content"><code class="language-dart">// Add to pubspec.yaml: get: ^4.6.6
+
+// 1. Create a Controller
+class CounterController extends GetxController {
+  var count = 0.obs; // Observable variable
+  
+  void increment() => count++;
+  void decrement() => count--;
+}
+
+// 2. Use in your app
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // Initialize controller
+    final CounterController c = Get.put(CounterController());
+    
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Obx widget rebuilds only this part
+            Obx(() => Text(
+              'Count: \${c.count}',
+              style: TextStyle(fontSize: 32),
+            )),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: c.decrement,
+                  child: Icon(Icons.remove),
+                ),
+                ElevatedButton(
+                  onPressed: c.increment,
+                  child: Icon(Icons.add),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ✅ Simple syntax (.obs for reactive variables)
+// ✅ Built-in navigation: Get.to(NextPage())
+// ✅ Dependency injection: Get.put(), Get.find()
+// ✅ Snackbars & Dialogs: Get.snackbar()
+// ✅ Extremely lightweight and fast</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 17: Useful Packages -->
+        <section class="slide" data-slide="17">
+            <div class="content">
+                <h1>📦 Popular Flutter Packages</h1>
+                <div class="packages-grid">
+                    <div class="package-card highlighted-package">
+                        <h3>get ⭐</h3>
+                        <p>State management + more</p>
+                        <code class="inline-code">get: ^4.6.6</code>
+                    </div>
+                    <div class="package-card">
+                        <h3>http</h3>
+                        <p>Make HTTP requests</p>
+                        <code class="inline-code">http: ^1.1.0</code>
+                    </div>
+                    <div class="package-card">
+                        <h3>shared_preferences</h3>
+                        <p>Local storage</p>
+                        <code class="inline-code">shared_preferences: ^2.2.0</code>
+                    </div>
+                    <div class="package-card">
+                        <h3>dio</h3>
+                        <p>Advanced HTTP client</p>
+                        <code class="inline-code">dio: ^5.3.0</code>
+                    </div>
+                    <div class="package-card">
+                        <h3>cached_network_image</h3>
+                        <p>Cache network images</p>
+                        <code class="inline-code">cached_network_image: ^3.3.0</code>
+                    </div>
+                    <div class="package-card">
+                        <h3>google_fonts</h3>
+                        <p>Use Google Fonts</p>
+                        <code class="inline-code">google_fonts: ^6.1.0</code>
+                    </div>
+                    <div class="package-card">
+                        <h3>image_picker</h3>
+                        <p>Pick images/videos</p>
+                        <code class="inline-code">image_picker: ^1.0.0</code>
+                    </div>
+                    <div class="package-card">
+                        <h3>sqflite</h3>
+                        <p>SQLite database</p>
+                        <code class="inline-code">sqflite: ^2.3.0</code>
+                    </div>
+                </div>
+                <div class="add-package-info">
+                    <h3>Adding a Package</h3>
+                    <div class="code-container">
+                        <pre><code class="language-bash"># Using command line
+flutter pub add package_name
+
+# Or manually add to pubspec.yaml, then run:
+flutter pub get</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 18: Best Practices -->
+        <section class="slide" data-slide="18">
+            <div class="content">
+                <h1>⭐ Best Practices</h1>
+                <div class="best-practices-list">
+                    <div class="practice-item">
+                        <span class="practice-icon">📁</span>
+                        <div>
+                            <h3>Follow Proper Folder Structure</h3>
+                            <p>Organize code: lib/screens/, lib/widgets/, lib/models/, lib/services/</p>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <span class="practice-icon">🎨</span>
+                        <div>
+                            <h3>Extract Widgets</h3>
+                            <p>Break large widgets into smaller, reusable components</p>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <span class="practice-icon">⚡</span>
+                        <div>
+                            <h3>Use const Constructors</h3>
+                            <p>Improve performance with const widgets when possible</p>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <span class="practice-icon">🔒</span>
+                        <div>
+                            <h3>Handle Null Safety</h3>
+                            <p>Use null-aware operators (?, ??, ??=, !)</p>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <span class="practice-icon">📝</span>
+                        <div>
+                            <h3>Write Clean Code</h3>
+                            <p>Follow Dart style guide, use meaningful names, add comments</p>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <span class="practice-icon">🧪</span>
+                        <div>
+                            <h3>Test Your Code</h3>
+                            <p>Write unit tests, widget tests, and integration tests</p>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <span class="practice-icon">🎯</span>
+                        <div>
+                            <h3>Use Keys Wisely</h3>
+                            <p>Use keys for widget identification when needed (ValueKey, ObjectKey, GlobalKey)</p>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <span class="practice-icon">🚀</span>
+                        <div>
+                            <h3>Optimize Performance</h3>
+                            <p>Use ListView.builder, avoid unnecessary rebuilds, profile your app</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 19: Resources -->
+        <section class="slide" data-slide="19">
+            <div class="content">
+                <h1>📚 Learning Resources</h1>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📖</div>
+                        <h3>Official Documentation</h3>
+                        <p>Comprehensive guides and API reference</p>
+                        <a href="https://flutter.dev/docs" target="_blank" class="resource-link">flutter.dev/docs</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🎓</div>
+                        <h3>Flutter Codelabs</h3>
+                        <p>Hands-on tutorials</p>
+                        <a href="https://flutter.dev/codelabs" target="_blank" class="resource-link">flutter.dev/codelabs</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📦</div>
+                        <h3>Pub.dev</h3>
+                        <p>Flutter package repository</p>
+                        <a href="https://pub.dev" target="_blank" class="resource-link">pub.dev</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">💬</div>
+                        <h3>Flutter Community</h3>
+                        <p>Discord, Reddit, Stack Overflow</p>
+                        <a href="https://flutter.dev/community" target="_blank" class="resource-link">flutter.dev/community</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🎥</div>
+                        <h3>YouTube Channels</h3>
+                        <p>Flutter official channel, tutorials</p>
+                        <a href="https://www.youtube.com/c/flutterdev" target="_blank" class="resource-link">Flutter YouTube</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">📱</div>
+                        <h3>Widget of the Week</h3>
+                        <p>Weekly widget showcase videos</p>
+                        <a href="https://www.youtube.com/playlist?list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG" target="_blank" class="resource-link">Watch Series</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 20: Thank You -->
+        <section class="slide" data-slide="20">
+            <div class="content">
+                <h1 class="title-animated">🎉 Ready to Build Amazing Apps!</h1>
+                <div class="thank-you-content">
+                    <p class="big-text">You now have the foundation to start your Flutter journey!</p>
+                    <div class="next-steps">
+                        <h3>Next Steps:</h3>
+                        <ul>
+                            <li>✓ Set up your development environment</li>
+                            <li>✓ Create your first Flutter app</li>
+                            <li>✓ Experiment with different widgets</li>
+                            <li>✓ Build a simple project</li>
+                            <li>✓ Join the Flutter community</li>
+                        </ul>
+                    </div>
+                    <div class="flutter-logo-end">
+                        <svg class="flutter-icon" viewBox="0 0 256 317" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="flutterGradient2" x1="3.952%" y1="26.993%" x2="75.897%" y2="52.919%">
+                                    <stop offset="0%" stop-color="#13B9FD"/>
+                                    <stop offset="100%" stop-color="#0278D4"/>
+                                </linearGradient>
+                            </defs>
+                            <polygon fill="url(#flutterGradient2)" points="157.666 0 0 157.666 48.8 206.5 255.5 0"/>
+                            <polygon fill="#02569B" fill-opacity="0.85" points="156.567 145.396 72.166 229.796 121.0 278.6 170.8 229.796 255.2 145.396"/>
+                            <polygon fill="#13B9FD" points="121.0 279.7 170.8 229.796 121.0 179.9"/>
+                        </svg>
+                    </div>
+                    <p class="motto">Happy Coding! 💙</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="controls">
+        <button class="nav-btn" id="prevBtn" onclick="previousSlide()">
+            <span>← Previous</span>
+        </button>
+        <div class="slide-indicator">
+            <span id="currentSlide">1</span> / <span id="totalSlides">19</span>
+        </div>
+        <button class="nav-btn" id="nextBtn" onclick="nextSlide()">
+            <span>Next →</span>
+        </button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Slide Dots -->
+    <div class="slide-dots" id="slideDots"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

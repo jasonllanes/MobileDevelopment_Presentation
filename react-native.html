@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Native Presentation</title>
+    <link rel="stylesheet" href="styles-rn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+</head>
+<body>
+    <div class="presentation-container">
+        
+        <!-- Slide 1: Welcome -->
+        <section class="slide active" data-slide="1">
+            <div class="content">
+                <div class="react-logo">
+                    <svg viewBox="-11.5 -10.232 23 20.463" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="2.05" fill="#61dafb"/>
+                        <g stroke="#61dafb" stroke-width="1" fill="none">
+                            <ellipse rx="11" ry="4.2"/>
+                            <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+                            <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+                        </g>
+                    </svg>
+                </div>
+                <h1 class="title-animated">React Native</h1>
+                <p class="subtitle">Learn Once, Write Anywhere</p>
+                <p class="author">A Complete Guide to Mobile Development</p>
+            </div>
+        </section>
+
+        <!-- Slide 2: What is React Native? -->
+        <section class="slide" data-slide="2">
+            <div class="content">
+                <h1>🤔 What is React Native?</h1>
+                <div class="definition-box">
+                    <p>React Native is an open-source mobile application framework created by <strong>Facebook (Meta)</strong> that enables developers to build mobile apps using <strong>JavaScript</strong> and <strong>React</strong>.</p>
+                </div>
+                <div class="features-grid-2col">
+                    <div class="feature-box">
+                        <div class="feature-icon">📱</div>
+                        <h3>Native Performance</h3>
+                        <p>Renders native UI components for true native experience</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">⚛️</div>
+                        <h3>Based on React</h3>
+                        <p>Uses React's declarative UI paradigm for mobile</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Live & Hot Reloading</h3>
+                        <p>See changes instantly without rebuilding</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Cross-Platform</h3>
+                        <p>Write once, run on iOS and Android</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Why React Native? -->
+        <section class="slide" data-slide="3">
+            <div class="content">
+                <h1>⭐ Why Choose React Native?</h1>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-number">1</div>
+                        <h3>JavaScript Ecosystem</h3>
+                        <p>Leverage the vast npm ecosystem and popular libraries</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-number">2</div>
+                        <h3>Reusable Code</h3>
+                        <p>Share up to 95% of code between iOS and Android</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-number">3</div>
+                        <h3>Strong Community</h3>
+                        <p>Backed by Facebook & thousands of contributors</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-number">4</div>
+                        <h3>Fast Development</h3>
+                        <p>Hot Reload speeds up iteration and debugging</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-number">5</div>
+                        <h3>Native Modules</h3>
+                        <p>Easily integrate native code when needed</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-number">6</div>
+                        <h3>Popular Apps</h3>
+                        <p>Used by Facebook, Instagram, Discord, Shopify</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Setup - Requirements -->
+        <section class="slide" data-slide="4">
+            <div class="content">
+                <h1>⚙️ Setup Requirements</h1>
+                <p class="section-subtitle">What you need to get started</p>
+                <div class="download-grid">
+                    <div class="download-card">
+                        <div class="download-icon">💻</div>
+                        <h3>Node.js</h3>
+                        <p>JavaScript runtime (v18+ recommended)</p>
+                        <button class="download-btn" onclick="downloadNodeJS()">
+                            <span>Download Node.js</span>
+                            <span class="btn-icon">⬇</span>
+                        </button>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">📝</div>
+                        <h3>VS Code</h3>
+                        <p>Recommended code editor</p>
+                        <button class="download-btn" onclick="downloadVSCode()">
+                            <span>Download VS Code</span>
+                            <span class="btn-icon">⬇</span>
+                        </button>
+                    </div>
+                    <div class="download-card highlight-card">
+                        <div class="download-icon">🤖</div>
+                        <h3>Android Studio</h3>
+                        <p>For Android development</p>
+                        <button class="download-btn" onclick="downloadAndroidStudio()">
+                            <span>Download Android Studio</span>
+                            <span class="btn-icon">⬇</span>
+                        </button>
+                        <p class="card-note">✓ Includes Android SDK & Emulator</p>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">🍎</div>
+                        <h3>Xcode (Mac only)</h3>
+                        <p>For iOS development</p>
+                        <button class="download-btn" onclick="downloadXcode()">
+                            <span>Download from App Store</span>
+                            <span class="btn-icon">⬇</span>
+                        </button>
+                        <p class="card-note">ℹ️ macOS required for iOS apps</p>
+                    </div>
+                    <div class="download-card">
+                        <div class="download-icon">☕</div>
+                        <h3>JDK</h3>
+                        <p>Java Development Kit</p>
+                        <button class="download-btn" onclick="downloadJDK()">
+                            <span>Download JDK 17</span>
+                            <span class="btn-icon">⬇</span>
+                        </button>
+                        <p class="card-note">ℹ️ Skip if Android Studio installed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Installation Steps -->
+        <section class="slide" data-slide="5">
+            <div class="content">
+                <h1>🔧 Installation Steps</h1>
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Install Node.js</h3>
+                            <p>Download and install Node.js (includes npm)</p>
+                            <p style="margin-top: 8px; color: #666; font-size: 0.9rem;">Verify: <code class="inline-code">node --version</code></p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Install React Native CLI</h3>
+                            <p>Install globally via npm</p>
+                            <div class="code-container">
+                                <pre><code class="language-bash">npm install -g react-native-cli</code></pre>
+                                <button class="action-btn" onclick="copyCommand('npm install -g react-native-cli')">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Setup Android Studio (For Android)</h3>
+                            <p>Install Android Studio with SDK & create virtual device</p>
+                            <p style="margin-top: 8px; color: #666; font-size: 0.9rem;">✓ Install Android SDK Platform 33 or higher</p>
+                            <p style="margin-top: 4px; color: #666; font-size: 0.9rem;">✓ Configure ANDROID_HOME environment variable</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Verify Installation</h3>
+                            <p>Check if everything is set up correctly</p>
+                            <div class="code-container">
+                                <pre><code class="language-bash">npx react-native doctor</code></pre>
+                                <button class="action-btn" onclick="copyCommand('npx react-native doctor')">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Android Studio Setup (Detailed) -->
+        <section class="slide" data-slide="6">
+            <div class="content">
+                <h1>🤖 Android Studio Setup - Detailed Guide</h1>
+                <p class="section-subtitle">Complete setup for Android development with React Native</p>
+                
+                <div class="setup-section">
+                    <h2>Option 1: Full Android Studio Installation (Recommended)</h2>
+                    <div class="steps-container" style="margin-bottom: 30px;">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Download & Install Android Studio</h3>
+                                <p>Download from <a href="https://developer.android.com/studio" target="_blank" style="color: var(--primary-color);">developer.android.com/studio</a></p>
+                                <p style="margin-top: 8px; color: #666; font-size: 0.95rem;">• Run the installer and follow the setup wizard</p>
+                                <p style="margin-top: 4px; color: #666; font-size: 0.95rem;">• Choose "Standard" installation type</p>
+                                <p style="margin-top: 4px; color: #666; font-size: 0.95rem;">• Accept all component installations (SDK, AVD, etc.)</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Install Required SDK Components</h3>
+                                <p>Open Android Studio → Settings/Preferences → <strong>Appearance & Behavior → System Settings → Android SDK</strong></p>
+                                <div style="margin-top: 12px; padding: 15px; background: #f5f5f5; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                                    <p style="margin: 0; font-weight: 600; color: var(--secondary-color);">SDK Platforms Tab:</p>
+                                    <p style="margin: 8px 0 0 0; color: #666;">☑ Android 13.0 (Tiramisu) - API Level 33</p>
+                                    <p style="margin: 4px 0 0 0; color: #666;">☑ Android 12.0 (S) - API Level 31</p>
+                                    <p style="margin: 12px 0 0 0; font-weight: 600; color: var(--secondary-color);">SDK Tools Tab:</p>
+                                    <p style="margin: 8px 0 0 0; color: #666;">☑ Android SDK Build-Tools 33.0.0</p>
+                                    <p style="margin: 4px 0 0 0; color: #666;">☑ Android Emulator</p>
+                                    <p style="margin: 4px 0 0 0; color: #666;">☑ Android SDK Platform-Tools</p>
+                                    <p style="margin: 4px 0 0 0; color: #666;">☑ Google Play Services</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Configure Environment Variables</h3>
+                                <p><strong>Windows:</strong></p>
+                                <div class="code-container" style="margin-top: 10px;">
+                                    <pre><code class="language-bash"># Add to System Environment Variables:
+ANDROID_HOME = C:\Users\YourUsername\AppData\Local\Android\Sdk
+
+# Add to Path:
+%ANDROID_HOME%\platform-tools
+%ANDROID_HOME%\emulator
+%ANDROID_HOME%\tools
+%ANDROID_HOME%\tools\bin</code></pre>
+                                    <button class="copy-btn-small" onclick="copyCommand('C:\\Users\\YourUsername\\AppData\\Local\\Android\\Sdk')">Copy Path</button>
+                                </div>
+                                <p style="margin-top: 15px;"><strong>macOS/Linux:</strong></p>
+                                <div class="code-container" style="margin-top: 10px;">
+                                    <pre><code class="language-bash"># Add to ~/.bash_profile or ~/.zshrc:
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools</code></pre>
+                                    <button class="copy-btn-small" onclick="copyCommand('export ANDROID_HOME=$HOME/Library/Android/sdk')">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Create an Android Virtual Device (AVD)</h3>
+                                <p>Tools → Device Manager → Create Device</p>
+                                <p style="margin-top: 8px; color: #666; font-size: 0.95rem;">• Select hardware: Pixel 5 or Pixel 6 recommended</p>
+                                <p style="margin-top: 4px; color: #666; font-size: 0.95rem;">• Choose system image: Tiramisu (API 33) or higher</p>
+                                <p style="margin-top: 4px; color: #666; font-size: 0.95rem;">• Configure AVD: 2048 MB RAM minimum</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Verify Installation</h3>
+                                <p>Close all terminals and open a new one, then run:</p>
+                                <div class="code-container" style="margin-top: 10px;">
+                                    <pre><code class="language-bash"># Check if adb is accessible
+adb version
+
+# List available Android devices/emulators
+adb devices</code></pre>
+                                    <button class="copy-btn-small" onclick="copyCommand('adb version')">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, rgba(97, 218, 251, 0.1), rgba(40, 44, 52, 0.05)); padding: 20px; border-radius: 12px; margin-top: 20px;">
+                        <h2 style="margin-top: 0; font-size: 1.3rem;">Option 2: Command-Line Tools Only (Advanced Users)</h2>
+                        <p style="color: #666; margin-bottom: 15px;">Download Android Command Line Tools and manually configure SDK components</p>
+                        <button class="action-btn" onclick="window.open('https://developer.android.com/studio#command-tools', '_blank')">
+                            Download Command Line Tools →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Creating Your First Project -->
+        <section class="slide" data-slide="7">
+            <div class="content">
+                <h1>🎨 Creating Your First Project</h1>
+                <div class="command-section">
+                    <h3>Using React Native CLI</h3>
+                    <div class="code-container">
+                        <pre><code class="language-bash"># Create a new React Native project
+npx react-native init MyFirstApp
+
+# Navigate to project directory
+cd MyFirstApp
+
+# Run on Android
+npx react-native run-android
+
+# Run on iOS (Mac only)
+npx react-native run-ios</code></pre>
+                        <button class="copy-btn-small" onclick="copyCommand('npx react-native init MyFirstApp')">Copy</button>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>Using Expo (Recommended for Beginners)</h3>
+                    <div class="code-container">
+                        <pre><code class="language-bash"># Install Expo CLI
+npm install -g expo-cli
+
+# Create new Expo project
+npx create-expo-app MyFirstApp
+
+# Start development server
+cd MyFirstApp
+npx expo start</code></pre>
+                        <button class="copy-btn-small" onclick="copyCommand('npx create-expo-app MyFirstApp')">Copy</button>
+                    </div>
+                </div>
+                <div class="project-structure">
+                    <h3>Project Structure</h3>
+                    <div class="folder-tree">
+                        <div class="folder">📁 MyFirstApp</div>
+                        <div class="folder indent">📄 App.js (Main component)</div>
+                        <div class="folder indent">📁 android (Android-specific)</div>
+                        <div class="folder indent">📁 ios (iOS-specific)</div>
+                        <div class="folder indent">📁 node_modules (Dependencies)</div>
+                        <div class="folder indent">📄 package.json (Project config)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Running Your Application -->
+        <section class="slide" data-slide="8">
+            <div class="content">
+                <h1>🚀 Running Your Application</h1>
+                <p class="section-subtitle">Test your app on emulator or physical device</p>
+                <div class="running-methods">
+                    <div class="code-container">
+                        <div class="code-header">
+                            <span>📱 Option 1: Physical Device</span>
+                        </div>
+                        <div class="device-setup">
+                            <h3>🔧 Enable USB Debugging (Android)</h3>
+                            <div class="setup-steps">
+                                <div class="step-item">
+                                    <span class="step-number">1</span>
+                                    <div>
+                                        <strong>Enable Developer Mode</strong>
+                                        <p>Settings → About Phone → Tap Build Number 7 times</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">2</span>
+                                    <div>
+                                        <strong>Enable USB Debugging</strong>
+                                        <p>Settings → Developer Options → Toggle USB Debugging ON</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">3</span>
+                                    <div>
+                                        <strong>Connect & Run</strong>
+                                        <p>Connect via USB and run: <code class="inline-code">npx react-native run-android</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-container">
+                        <div class="code-header">
+                            <span>💻 Option 2: Using Emulator</span>
+                        </div>
+                        <div class="device-setup">
+                            <h3>🎮 Android Emulator</h3>
+                            <div class="setup-steps">
+                                <div class="step-item">
+                                    <span class="step-number">1</span>
+                                    <div>
+                                        <strong>Open AVD Manager</strong>
+                                        <p>Android Studio → Tools → Device Manager</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">2</span>
+                                    <div>
+                                        <strong>Create Virtual Device</strong>
+                                        <p>Click Create Device → Select Pixel 6</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">3</span>
+                                    <div>
+                                        <strong>Start & Run</strong>
+                                        <p>Launch emulator, then: <code class="inline-code">npx react-native run-android</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: React Native Fundamentals -->
+        <section class="slide" data-slide="9">
+            <div class="content">
+                <h1>📚 React Native Fundamentals</h1>
+                <div class="fundamentals-grid">
+                    <div class="fundamental-card">
+                        <h3>⚛️ Components</h3>
+                        <p>Everything is built with reusable React components</p>
+                    </div>
+                    <div class="fundamental-card">
+                        <h3>🎨 JSX</h3>
+                        <p>Write UI using JavaScript XML syntax</p>
+                    </div>
+                    <div class="fundamental-card">
+                        <h3>🔄 Props & State</h3>
+                        <p>Manage data flow and component state</p>
+                    </div>
+                    <div class="fundamental-card">
+                        <h3>🪝 Hooks</h3>
+                        <p>Use state and lifecycle in functional components</p>
+                    </div>
+                    <div class="fundamental-card">
+                        <h3>🎯 Native Modules</h3>
+                        <p>Access platform-specific APIs and features</p>
+                    </div>
+                    <div class="fundamental-card">
+                        <h3>📱 Platform-Specific Code</h3>
+                        <p>Customize behavior for iOS and Android</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- More slides will continue... -->
+        <!-- Slide 10: Core Components - Part 1 -->
+        <section class="slide" data-slide="10">
+            <div class="content">
+                <h1>🧱 Core Components - Basics</h1>
+                <p class="section-subtitle">Essential building blocks</p>
+                <div class="components-grid">
+                    <div class="component-card">
+                        <h3>&lt;View&gt;</h3>
+                        <p>Container component (like div)</p>
+                        <div class="code-mini">
+                            <pre><code class="language-javascript">&lt;View style={styles.container}&gt;
+  {/* Child components */}
+&lt;/View&gt;</code></pre>
+                        </div>
+                    </div>
+                    <div class="component-card">
+                        <h3>&lt;Text&gt;</h3>
+                        <p>Display text content</p>
+                        <div class="code-mini">
+                            <pre><code class="language-javascript">&lt;Text style={styles.title}&gt;
+  Hello React Native!
+&lt;/Text&gt;</code></pre>
+                        </div>
+                    </div>
+                    <div class="component-card">
+                        <h3>&lt;Image&gt;</h3>
+                        <p>Display images</p>
+                        <div class="code-mini">
+                            <pre><code class="language-javascript">&lt;Image
+  source={{uri: 'https://...'}}
+  style={styles.image}
+/&gt;</code></pre>
+                        </div>
+                    </div>
+                    <div class="component-card">
+                        <h3>&lt;ScrollView&gt;</h3>
+                        <p>Scrollable container</p>
+                        <div class="code-mini">
+                            <pre><code class="language-javascript">&lt;ScrollView&gt;
+  {/* Scrollable content */}
+&lt;/ScrollView&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: Stylesheet & Styling -->
+        <section class="slide" data-slide="11">
+            <div class="content">
+                <h1>🎨 Styling in React Native</h1>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Using StyleSheet API</span>
+                        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code class="language-javascript">import { StyleSheet, View, Text } from 'react-native';
+
+export default function App() {
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.title}&gt;Hello React Native!&lt;/Text&gt;
+      &lt;Text style={[styles.text, styles.bold]}&gt;
+        Multiple styles
+      &lt;/Text&gt;
+    &lt;/View&gt;
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#61dafb',
+    marginBottom: 20,
+  },
+  text: {
+    fontSize: 16,
+    color: '#333',
+  },
+  bold: {
+    fontWeight: 'bold',
+  },
+});</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 12: Flexbox Layout -->
+        <section class="slide" data-slide="12">
+            <div class="content">
+                <h1>📐 Flexbox Layout</h1>
+                <p class="section-subtitle">React Native uses Flexbox for layouts</p>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>Flexbox Example</span>
+                        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code class="language-javascript">const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'row', // or 'column' (default)
+    justifyContent: 'space-between', // or 'center', 'flex-start', etc.
+    alignItems: 'center', // or 'flex-start', 'flex-end', 'stretch'
+    padding: 20,
+  },
+  box: {
+    width: 100,
+    height: 100,
+    backgroundColor: '#61dafb',
+  },
+});
+
+// Common Flexbox Properties:
+// flex: 1              - Take available space
+// flexDirection        - Row or column layout
+// justifyContent       - Main axis alignment
+// alignItems           - Cross axis alignment
+// flexWrap             - Wrap items or not
+// alignSelf            - Individual item alignment</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 13: Interactive Components -->
+        <section class="slide" data-slide="13">
+            <div class="content">
+                <h1>👆 Interactive Components</h1>
+                <p class="section-subtitle">Buttons and touchable elements</p>
+                <div class="components-grid">
+                    <div class="component-card">
+                        <h3>&lt;Button&gt;</h3>
+                        <p>Basic button component</p>
+                        <div class="code-mini">
+                            <pre><code class="language-javascript">&lt;Button
+  title="Click Me"
+  onPress={() => alert('Pressed!')}
+  color="#61dafb"
+/&gt;</code></pre>
+                        </div>
+                    </div>
+                    <div class="component-card">
+                        <h3>&lt;TouchableOpacity&gt;</h3>
+                        <p>Touchable with opacity feedback</p>
+                        <div class="code-mini">
+                            <pre><code class="language-javascript">&lt;TouchableOpacity
+  onPress={handlePress}
+  activeOpacity={0.7}
+&gt;
+  &lt;Text&gt;Touch Me&lt;/Text&gt;
+&lt;/TouchableOpacity&gt;</code></pre>
+                        </div>
+                    </div>
+                    <div class="component-card">
+                        <h3>&lt;TextInput&gt;</h3>
+                        <p>Text input field</p>
+                        <div class="code-mini">
+                            <pre><code class="language-javascript">&lt;TextInput
+  placeholder="Enter text"
+  value={text}
+  onChangeText={setText}
+/&gt;</code></pre>
+                        </div>
+                    </div>
+                    <div class="component-card">
+                        <h3>&lt;Switch&gt;</h3>
+                        <p>Toggle switch</p>
+                        <div class="code-mini">
+                            <pre><code class="language-javascript">&lt;Switch
+  value={isEnabled}
+  onValueChange={setIsEnabled}
+/&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 14: Lists & FlatList -->
+        <section class="slide" data-slide="14">
+            <div class="content">
+                <h1>📋 Lists - FlatList</h1>
+                <p class="section-subtitle">Efficiently render lists of data</p>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>FlatList Example</span>
+                        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code class="language-javascript">import { FlatList } from 'react-native';
+
+const DATA = [
+  { id: '1', title: 'First Item' },
+  { id: '2', title: 'Second Item' },
+  { id: '3', title: 'Third Item' },
+];
+
+export default function App() {
+  const renderItem = ({ item }) => (
+    &lt;View style={styles.item}&gt;
+      &lt;Text style={styles.title}&gt;{item.title}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+
+  return (
+    &lt;FlatList
+      data={DATA}
+      renderItem={renderItem}
+      keyExtractor={item => item.id}
+    /&gt;
+  );
+}
+
+// FlatList is optimized for:
+// ✓ Large lists (renders only visible items)
+// ✓ Smooth scrolling performance
+// ✓ Pull-to-refresh
+// ✓ Infinite scroll</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 15: Navigation -->
+        <section class="slide" data-slide="15">
+            <div class="content">
+                <h1>🧭 Navigation</h1>
+                <p class="section-subtitle">React Navigation - Screen navigation</p>
+                <div class="navigation-methods">
+                    <div class="code-container">
+                        <div class="code-header">
+                            <span>📍 Setup React Navigation</span>
+                            <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                        </div>
+                        <pre><code class="language-bash"># Install React Navigation
+npm install @react-navigation/native
+
+# Install dependencies
+npm install react-native-screens react-native-safe-area-context
+
+# Install stack navigator
+npm install @react-navigation/native-stack</code></pre>
+                    </div>
+                    <div class="code-container">
+                        <div class="code-header">
+                            <span>🔀 Stack Navigator Example</span>
+                            <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                        </div>
+                        <pre><code class="language-javascript">import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
+
+function HomeScreen({ navigation }) {
+  return (
+    &lt;Button
+      title="Go to Details"
+      onPress={() => navigation.navigate('Details')}
+    /&gt;
+  );
+}
+
+function DetailsScreen() {
+  return &lt;Text&gt;Details Screen&lt;/Text&gt;;
+}
+
+export default function App() {
+  return (
+    &lt;NavigationContainer&gt;
+      &lt;Stack.Navigator&gt;
+        &lt;Stack.Screen name="Home" component={HomeScreen} /&gt;
+        &lt;Stack.Screen name="Details" component={DetailsScreen} /&gt;
+      &lt;/Stack.Navigator&gt;
+    &lt;/NavigationContainer&gt;
+  );
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 16: State Management with Hooks -->
+        <section class="slide" data-slide="16">
+            <div class="content">
+                <h1>🎯 State Management</h1>
+                <p class="section-subtitle">Using React Hooks</p>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>useState & useEffect Example</span>
+                        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code class="language-javascript">import { useState, useEffect } from 'react';
+import { View, Text, Button } from 'react-native';
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+  const [message, setMessage] = useState('');
+
+  // Run when count changes
+  useEffect(() => {
+    if (count > 5) {
+      setMessage('Count is high!');
+    } else {
+      setMessage('Keep counting...');
+    }
+  }, [count]);
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.count}&gt;Count: {count}&lt;/Text&gt;
+      &lt;Text&gt;{message}&lt;/Text&gt;
+      &lt;Button
+        title="Increment"
+        onPress={() => setCount(count + 1)}
+      /&gt;
+      &lt;Button
+        title="Decrement"
+        onPress={() => setCount(count - 1)}
+      /&gt;
+    &lt;/View&gt;
+  );
+}
+
+// Common Hooks:
+// useState    - Component state
+// useEffect   - Side effects & lifecycle
+// useContext  - Context API
+// useReducer  - Complex state logic</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 17: Popular Libraries -->
+        <section class="slide" data-slide="17">
+            <div class="content">
+                <h1>📦 Popular Libraries</h1>
+                <p class="section-subtitle">Essential packages for React Native</p>
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <h3>React Navigation ⭐</h3>
+                        <p>Routing and navigation</p>
+                        <code class="inline-code">@react-navigation/native</code>
+                    </div>
+                    <div class="package-card">
+                        <h3>Redux Toolkit</h3>
+                        <p>State management</p>
+                        <code class="inline-code">@reduxjs/toolkit</code>
+                    </div>
+                    <div class="package-card">
+                        <h3>Axios</h3>
+                        <p>HTTP requests</p>
+                        <code class="inline-code">axios</code>
+                    </div>
+                    <div class="package-card">
+                        <h3>AsyncStorage</h3>
+                        <p>Local data storage</p>
+                        <code class="inline-code">@react-native-async-storage/async-storage</code>
+                    </div>
+                    <div class="package-card">
+                        <h3>React Native Paper</h3>
+                        <p>Material Design components</p>
+                        <code class="inline-code">react-native-paper</code>
+                    </div>
+                    <div class="package-card">
+                        <h3>Expo</h3>
+                        <p>Managed workflow & tools</p>
+                        <code class="inline-code">expo</code>
+                    </div>
+                </div>
+                <div class="add-package-info">
+                    <h3>Adding Packages</h3>
+                    <div class="code-container">
+                        <pre><code class="language-bash"># Using npm
+npm install package-name
+
+# Using yarn
+yarn add package-name</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 18: Best Practices -->
+        <section class="slide" data-slide="18">
+            <div class="content">
+                <h1>✅ Best Practices</h1>
+                <div class="best-practices-list">
+                    <div class="practice-item">
+                        <div class="practice-icon">🎯</div>
+                        <div>
+                            <h3>Use Functional Components & Hooks</h3>
+                            <p>Prefer functional components over class components for cleaner code</p>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <div class="practice-icon">♻️</div>
+                        <div>
+                            <h3>Optimize Re-renders</h3>
+                            <p>Use React.memo, useMemo, and useCallback to prevent unnecessary re-renders</p>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <div class="practice-icon">📱</div>
+                        <div>
+                            <h3>Use FlatList for Large Lists</h3>
+                            <p>Never use ScrollView for long lists - use FlatList or SectionList</p>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <div class="practice-icon">🎨</div>
+                        <div>
+                            <h3>Create StyleSheet Outside Component</h3>
+                            <p>Define styles with StyleSheet.create() outside render for better performance</p>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <div class="practice-icon">🔍</div>
+                        <div>
+                            <h3>Use Debugger & React DevTools</h3>
+                            <p>Enable Fast Refresh and use debugging tools for faster development</p>
+                        </div>
+                    </div>
+                    <div class="practice-item">
+                        <div class="practice-icon">🧪</div>
+                        <div>
+                            <h3>Test on Real Devices</h3>
+                            <p>Always test on physical devices before releasing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 19: Resources -->
+        <section class="slide" data-slide="19">
+            <div class="content">
+                <h1>📚 Useful Resources</h1>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>📖 Official Docs</h3>
+                        <p>reactnative.dev</p>
+                        <button class="resource-btn" onclick="window.open('https://reactnative.dev', '_blank')">Visit</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>⚛️ React Docs</h3>
+                        <p>react.dev</p>
+                        <button class="resource-btn" onclick="window.open('https://react.dev', '_blank')">Visit</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>🧭 React Navigation</h3>
+                        <p>reactnavigation.org</p>
+                        <button class="resource-btn" onclick="window.open('https://reactnavigation.org', '_blank')">Visit</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>📦 npm Packages</h3>
+                        <p>npmjs.com</p>
+                        <button class="resource-btn" onclick="window.open('https://www.npmjs.com', '_blank')">Visit</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>💬 Community</h3>
+                        <p>GitHub Discussions & Discord</p>
+                        <button class="resource-btn" onclick="window.open('https://github.com/facebook/react-native', '_blank')">Visit</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>🎓 Learn</h3>
+                        <p>FreeCodeCamp, Udemy, YouTube</p>
+                        <button class="resource-btn" onclick="window.open('https://www.freecodecamp.org', '_blank')">Visit</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 20: Thank You -->
+        <section class="slide" data-slide="20">
+            <div class="content">
+                <h1 class="title-animated">🎉 Ready to Build with React Native!</h1>
+                <div class="thank-you-content">
+                    <p class="big-text">You now have the foundation to start building mobile apps!</p>
+                    <div class="next-steps">
+                        <h3>Next Steps:</h3>
+                        <ul>
+                            <li>✓ Set up your development environment</li>
+                            <li>✓ Create your first React Native app</li>
+                            <li>✓ Explore components and styling</li>
+                            <li>✓ Build a real project</li>
+                            <li>✓ Join the React Native community</li>
+                        </ul>
+                    </div>
+                    <div class="final-message">
+                        <p>Happy Coding! 🚀</p>
+                        <button class="action-btn" onclick="window.location.href='index.html'">← Back to Menu</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="controls">
+        <button class="nav-btn" id="prevBtn" onclick="previousSlide()">
+            <span>◀ Previous</span>
+        </button>
+        <div class="slide-indicator">
+            <span id="currentSlide">1</span> / <span id="totalSlides">20</span>
+        </div>
+        <button class="nav-btn" id="nextBtn" onclick="nextSlide()">
+            <span>Next ▶</span>
+        </button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Slide Dots -->
+    <div class="slide-dots" id="slideDots"></div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <script src="script-rn.js"></script>
+</body>
+</html>

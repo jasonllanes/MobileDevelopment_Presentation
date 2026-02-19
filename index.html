@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Development Presentations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --flutter-primary: #42A5F5;
+            --flutter-secondary: #0D47A1;
+            --react-primary: #61DAFB;
+            --react-secondary: #282C34;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+            text-decoration: none;
+            display: block;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            transition: height 0.3s ease;
+        }
+
+        .card.flutter::before {
+            background: linear-gradient(90deg, var(--flutter-primary), var(--flutter-secondary));
+        }
+
+        .card.react-native::before {
+            background: linear-gradient(90deg, var(--react-primary), var(--react-secondary));
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+        }
+
+        .card:hover::before {
+            height: 100%;
+            opacity: 0.05;
+        }
+
+        .card-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover .card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .card-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .card.flutter h2 {
+            color: var(--flutter-primary);
+        }
+
+        .card.react-native h2 {
+            color: var(--react-primary);
+        }
+
+        .card p {
+            color: #666;
+            font-size: 1.1rem;
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .card-features li {
+            padding: 10px 0;
+            color: #555;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-features li::before {
+            content: '✓';
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .card.flutter .card-features li::before {
+            background: linear-gradient(135deg, var(--flutter-primary), var(--flutter-secondary));
+        }
+
+        .card.react-native .card-features li::before {
+            background: linear-gradient(135deg, var(--react-primary), var(--react-secondary));
+        }
+
+        .card-button {
+            width: 100%;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card.flutter .card-button {
+            background: linear-gradient(135deg, var(--flutter-primary), var(--flutter-secondary));
+        }
+
+        .card.react-native .card-button {
+            background: linear-gradient(135deg, var(--react-primary), var(--react-secondary));
+        }
+
+        .card-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 968px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header p {
+                font-size: 1.1rem;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .card {
+                padding: 40px 30px;
+            }
+
+            .card h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 Mobile Development</h1>
+            <p>Choose your framework to get started</p>
+        </div>
+
+        <div class="cards-container">
+            <!-- Flutter Card -->
+            <a href="flutter.html" class="card flutter">
+                <div class="card-icon">
+                    <svg viewBox="0 0 256 317" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient x1="3.952%" y1="26.993%" x2="75.897%" y2="52.919%" id="flutter-gradient">
+                                <stop stop-color="#000000" offset="0%"></stop>
+                                <stop stop-color="#42A5F5" stop-opacity=".631" offset="100%"></stop>
+                            </linearGradient>
+                        </defs>
+                        <polygon fill="#47C5FB" points="157.666 0.001 0 157.667 48.8 206.5 255.267 0.001"></polygon>
+                        <polygon fill="#00569E" points="156.567 145.397 72.147 229.816 121.13 278.8 254.866 145.397"></polygon>
+                        <polygon fill="#00B5F8" points="121.13 229.816 157.666 266.353 245.132 178.887 208.596 142.384"></polygon>
+                        <polygon fill-opacity=".85" fill="url(#flutter-gradient)" points="121.133 229.816 157.667 193.283 208.596 142.384 121.133 54.917"></polygon>
+                    </svg>
+                </div>
+                <h2>Flutter</h2>
+                <p>Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.</p>
+                <ul class="card-features">
+                    <li>Single codebase for all platforms</li>
+                    <li>Fast development with Hot Reload</li>
+                    <li>Beautiful Material & Cupertino widgets</li>
+                    <li>Native performance</li>
+                    <li>Powered by Dart language</li>
+                </ul>
+                <button class="card-button">Explore Flutter →</button>
+            </a>
+
+            <!-- React Native Card -->
+            <a href="react-native.html" class="card react-native">
+                <div class="card-icon">
+                    <svg viewBox="-11.5 -10.232 23 20.463" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="2.05" fill="#61dafb"/>
+                        <g stroke="#61dafb" fill="none">
+                            <ellipse rx="11" ry="4.2"/>
+                            <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+                            <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+                        </g>
+                    </svg>
+                </div>
+                <h2>React Native</h2>
+                <p>Facebook's framework for building native mobile apps using JavaScript and React. Write once, run on iOS and Android.</p>
+                <ul class="card-features">
+                    <li>Learn once, write anywhere</li>
+                    <li>Fast Refresh for instant updates</li>
+                    <li>Native components & APIs</li>
+                    <li>Huge ecosystem & community</li>
+                    <li>Powered by React & JavaScript</li>
+                </ul>
+                <button class="card-button">Explore React Native →</button>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Mobile Development Presentations | Built with ❤️</p>
+        </div>
+    </div>
+</body>
+</html>
