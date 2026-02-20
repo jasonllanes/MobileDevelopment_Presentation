@@ -930,10 +930,10 @@ function initializeWidgetExplorers() {
                 
                 // Determine which category (layout, ui, interactive, statemanagement)
                 let category = '';
-                if (slideNumber === '11') category = 'layout';
-                else if (slideNumber === '12') category = 'ui';
-                else if (slideNumber === '13') category = 'interactive';
-                else if (slideNumber === '16') category = 'statemanagement';
+                if (slideNumber === '12') category = 'layout';
+                else if (slideNumber === '13') category = 'ui';
+                else if (slideNumber === '14') category = 'interactive';
+                else if (slideNumber === '17') category = 'statemanagement';
                 
                 if (category && widgetType) {
                     updateWidgetCode(category, widgetType, slide);
