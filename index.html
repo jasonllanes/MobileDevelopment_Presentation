@@ -14,8 +14,8 @@
         :root {
             --flutter-primary: #42A5F5;
             --flutter-secondary: #0D47A1;
-            --react-primary: #61DAFB;
-            --react-secondary: #282C34;
+            --firebase-primary: #FFA000;
+            --firebase-secondary: #FF6F00;
         }
 
         body {
@@ -92,7 +92,7 @@
         }
 
         .card.react-native::before {
-            background: linear-gradient(90deg, var(--react-primary), var(--react-secondary));
+            background: linear-gradient(90deg, var(--firebase-primary), var(--firebase-secondary));
         }
 
         .card:hover {
@@ -135,7 +135,7 @@
         }
 
         .card.react-native h2 {
-            color: var(--react-primary);
+            color: var(--firebase-primary);
         }
 
         .card p {
@@ -178,7 +178,7 @@
         }
 
         .card.react-native .card-features li::before {
-            background: linear-gradient(135deg, var(--react-primary), var(--react-secondary));
+            background: linear-gradient(135deg, var(--firebase-primary), var(--firebase-secondary));
         }
 
         .card-button {
@@ -200,7 +200,7 @@
         }
 
         .card.react-native .card-button {
-            background: linear-gradient(135deg, var(--react-primary), var(--react-secondary));
+            background: linear-gradient(135deg, var(--firebase-primary), var(--firebase-secondary));
         }
 
         .card-button:hover {
@@ -273,26 +273,27 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>📱 Mobile Development</h1>
-            <p>Choose your framework to get started</p>
+            <h1>Mobile Development</h1>
+            <p>Choose your path to get started</p>
+            
+            <!-- Presenter Information -->
+            <div style="background: rgba(255, 255, 255, 0.95); padding: 40px 50px; border-radius: 20px; margin: 40px auto; max-width: 700px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); display: flex; align-items: center; gap: 30px;">
+                <div style="flex-shrink: 0;">
+                    <img src="avatar.jpg" alt="Jason S. Llanes" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid #667eea; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">
+                </div>
+                <div style="text-align: left;">
+                    <h2 style="color: #667eea; font-size: 2rem; margin-bottom: 12px;">Jason S. Llanes</h2>
+                    <p style="color: #555; font-size: 1.1rem; margin: 5px 0;">💻 Web Developer | 📱 Mobile Developer | 🔍 QA</p>
+                    <p style="color: #333; font-size: 1rem; margin-top: 10px;"><strong>DICT Region X - Information System Analyst II</strong></p>
+                </div>
+            </div>
         </div>
 
         <div class="cards-container">
             <!-- Flutter Card -->
             <a href="flutter.html" class="card flutter">
                 <div class="card-icon">
-                    <svg viewBox="0 0 256 317" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient x1="3.952%" y1="26.993%" x2="75.897%" y2="52.919%" id="flutter-gradient">
-                                <stop stop-color="#000000" offset="0%"></stop>
-                                <stop stop-color="#42A5F5" stop-opacity=".631" offset="100%"></stop>
-                            </linearGradient>
-                        </defs>
-                        <polygon fill="#47C5FB" points="157.666 0.001 0 157.667 48.8 206.5 255.267 0.001"></polygon>
-                        <polygon fill="#00569E" points="156.567 145.397 72.147 229.816 121.13 278.8 254.866 145.397"></polygon>
-                        <polygon fill="#00B5F8" points="121.13 229.816 157.666 266.353 245.132 178.887 208.596 142.384"></polygon>
-                        <polygon fill-opacity=".85" fill="url(#flutter-gradient)" points="121.133 229.816 157.667 193.283 208.596 142.384 121.133 54.917"></polygon>
-                    </svg>
+                    <img src="flutter_logo.png" alt="Flutter Logo" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
                 <h2>Flutter</h2>
                 <p>Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.</p>
@@ -306,28 +307,21 @@
                 <button class="card-button">Explore Flutter →</button>
             </a>
 
-            <!-- React Native Card -->
-            <a href="react-native.html" class="card react-native">
+            <!-- Firebase Card -->
+            <a href="firebase.html" class="card react-native">
                 <div class="card-icon">
-                    <svg viewBox="-11.5 -10.232 23 20.463" xmlns="http://www.w3.org/2000/svg">
-                        <circle r="2.05" fill="#61dafb"/>
-                        <g stroke="#61dafb" fill="none">
-                            <ellipse rx="11" ry="4.2"/>
-                            <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
-                            <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
-                        </g>
-                    </svg>
+                    <img src="firebase.png" alt="Firebase" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'font-size: 80px;\'>🔥</div>';">
                 </div>
-                <h2>React Native</h2>
-                <p>Facebook's framework for building native mobile apps using JavaScript and React. Write once, run on iOS and Android.</p>
+                <h2>Firebase</h2>
+                <p>Google's Backend-as-a-Service platform providing authentication, real-time database, cloud storage, and more for mobile and web apps.</p>
                 <ul class="card-features">
-                    <li>Learn once, write anywhere</li>
-                    <li>Fast Refresh for instant updates</li>
-                    <li>Native components & APIs</li>
-                    <li>Huge ecosystem & community</li>
-                    <li>Powered by React & JavaScript</li>
+                    <li>Real-time Database & Firestore</li>
+                    <li>Authentication & User Management</li>
+                    <li>Cloud Storage & Hosting</li>
+                    <li>Cloud Functions & Analytics</li>
+                    <li>Easy integration with Flutter</li>
                 </ul>
-                <button class="card-button">Explore React Native →</button>
+                <button class="card-button">Explore Firebase →</button>
             </a>
         </div>
 

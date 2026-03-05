@@ -11,26 +11,30 @@
 </head>
 <body>
     <div class="presentation-container">
-        <!-- Slide 1: Welcome -->
-        <section class="slide active" data-slide="1">
+        <!-- Slide 1: Welcome to Flutter -->
+        <section class="slide" data-slide="1">
             <div class="content">
-                <h1 class="title-animated">🚀 Welcome to Flutter</h1>
-                <p class="subtitle">Build Beautiful Apps Everywhere</p>
-
-                <div class="flutter-logo">
-                    <svg class="flutter-icon" viewBox="0 0 256 317" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="flutterGradient" x1="3.952%" y1="26.993%" x2="75.897%" y2="52.919%">
-                                <stop offset="0%" stop-color="#13B9FD"/>
-                                <stop offset="100%" stop-color="#0278D4"/>
-                            </linearGradient>
-                        </defs>
-                        <polygon fill="url(#flutterGradient)" points="157.666 0 0 157.666 48.8 206.5 255.5 0"/>
-                        <polygon fill="#02569B" fill-opacity="0.85" points="156.567 145.396 72.166 229.796 121.0 278.6 170.8 229.796 255.2 145.396"/>
-                        <polygon fill="#13B9FD" points="121.0 279.7 170.8 229.796 121.0 179.9"/>
-                    </svg>
+                <div style="text-align: center; padding: 50px 20px;">
+                    <!-- <div style="margin-bottom: 40px;">
+                        <img src="flutter_logo.png" alt="Flutter Logo" style="width: 200px; height: 200px; object-fit: contain; filter: drop-shadow(0 10px 30px rgba(2, 86, 155, 0.3));">
+                    </div> -->
+                    <h1 style="font-size: 4rem; color: var(--primary-color); margin-bottom: 20px; text-shadow: 0 4px 12px rgba(2, 86, 155, 0.2);">Flutter</h1>
+                    <p style="font-size: 1.8rem; color: #555; margin-bottom: 40px;">Google's UI Toolkit for Beautiful Apps</p>
+                    
+                    <div style="background: linear-gradient(135deg, rgba(2, 86, 155, 0.1), rgba(19, 185, 253, 0.1)); padding: 40px; border-radius: 16px; max-width: 800px; margin: 40px auto; border-left: 6px solid var(--primary-color);">
+                        <h2 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 20px;">What You'll Learn Today</h2>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; text-align: left; font-size: 1.2rem; color: #333;">
+                            <div>✅ Flutter Setup & Installation</div>
+                            <div>✅ Widget Fundamentals</div>
+                            <div>✅ Stateless & Stateful Widgets</div>
+                            <div>✅ Navigation & Routes</div>
+                            <div>✅ State Management</div>
+                            <div>✅ Building Login/Signup UI</div>
+                        </div>
+                    </div>
+                    
+                    <p style="font-size: 1.3rem; color: #666; margin-top: 50px;">Press <strong>→</strong> or <strong>Space</strong> to begin</p>
                 </div>
-                <p class="intro-text">Your journey to cross-platform development starts here!</p>
             </div>
         </section>
 
@@ -135,7 +139,7 @@
         </section>
 
         <!-- Slide 5: Setup - Downloads -->
-        <section class="slide" data-slide="5">
+        <section class="slide" data-slide="6">
             <div class="content">
                 <h1>⚙️ Setting Up Flutter</h1>
                 <p class="section-subtitle">Download Required Tools</p>
@@ -206,7 +210,7 @@
         </section>
 
         <!-- Slide 6: Installation Steps -->
-        <section class="slide" data-slide="6">
+        <section class="slide" data-slide="7">
             <div class="content">
                 <h1>🔧 Installation Steps</h1>
                 <div class="steps-container">
@@ -315,7 +319,7 @@ flutter doctor --android-licenses</code></pre>
         </section>
 
         <!-- Slide 7: Creating Your First Project -->
-        <section class="slide" data-slide="7">
+        <section class="slide" data-slide="8">
             <div class="content">
                 <h1>🎨 Creating Your First Flutter Project</h1>
                 <div class="command-section">
@@ -356,7 +360,7 @@ flutter run</code></pre>
         </section>
 
         <!-- Slide 8: Running Your Application -->
-        <section class="slide" data-slide="8">
+        <section class="slide" data-slide="9">
             <div class="content">
                 <h1>🚀 Running Your Application</h1>
                 <p class="section-subtitle">Test your app on emulator or physical device</p>
@@ -492,7 +496,7 @@ flutter run</code></pre>
         </section>
 
         <!-- Slide 9: Flutter Fundamentals -->
-        <section class="slide" data-slide="9">
+        <section class="slide" data-slide="10">
             <div class="content">
                 <h1>📚 Flutter Fundamentals</h1>
                 <div class="fundamentals-grid">
@@ -564,7 +568,7 @@ class MyApp extends StatelessWidget {
         </section>
 
         <!-- Slide 10: Stateless Widget -->
-        <section class="slide" data-slide="10">
+        <section class="slide" data-slide="11">
             <div class="content">
                 <h1>🗿 Stateless Widgets</h1>
                 <p class="section-subtitle">Widgets that don't change over time</p>
@@ -628,7 +632,7 @@ class MyApp extends StatelessWidget {
         </section>
 
         <!-- Slide 11: Stateful Widget -->
-        <section class="slide" data-slide="11">
+        <section class="slide" data-slide="12">
             <div class="content">
                 <h1>🔄 Stateful Widgets</h1>
                 <p class="section-subtitle">Widgets that can change dynamically</p>
@@ -715,7 +719,7 @@ class _CounterWidgetState extends State&lt;CounterWidget&gt; {
         </section>
 
         <!-- Slide 12: Common Widgets - Layout -->
-        <section class="slide" data-slide="12">
+        <section class="slide" data-slide="13">
             <div class="content">
                 <h1>📐 Layout Widgets</h1>
                 <p class="section-subtitle">Click on a widget to see its code</p>
@@ -782,7 +786,7 @@ class _CounterWidgetState extends State&lt;CounterWidget&gt; {
         </section>
 
         <!-- Slide 13: Common Widgets - UI Elements -->
-        <section class="slide" data-slide="13">
+        <section class="slide" data-slide="14">
             <div class="content">
                 <h1>🎨 UI Widgets</h1>
                 <p class="section-subtitle">Click on a widget to see its code</p>
@@ -847,7 +851,7 @@ class _CounterWidgetState extends State&lt;CounterWidget&gt; {
         </section>
 
         <!-- Slide 14: Interactive Widgets -->
-        <section class="slide" data-slide="14">
+        <section class="slide" data-slide="15">
             <div class="content">
                 <h1>🎮 Interactive Widgets</h1>
                 <p class="section-subtitle">Click on a widget to see its code</p>
@@ -916,7 +920,7 @@ class _CounterWidgetState extends State&lt;CounterWidget&gt; {
         </section>
 
         <!-- Slide 15: ListView & GridView -->
-        <section class="slide" data-slide="15">
+        <section class="slide" data-slide="16">
             <div class="content">
                 <h1>📜 Scrollable Widgets</h1>
                 <div class="two-column-layout">
@@ -994,9 +998,8 @@ GridView.builder(
         </section>
 
         <!-- Slide 16: Navigation -->
+        <!-- Slide 16: Navigation Routes -->
         <section class="slide" data-slide="16">
-            <div class="content">
-                <h1>🧭 Navigation</h1>
                 <p class="section-subtitle">Moving between screens</p>
                 <div class="navigation-methods">
                     <div class="code-container">
@@ -1123,8 +1126,174 @@ Navigator.push(
             </div>
         </section>
 
-        <!-- Slide 17: State Management Basics -->
+        <!-- Slide 17: Text Input & Controllers -->
+        <!-- Slide 17: Text Input & Controllers -->
         <section class="slide" data-slide="17">
+                <p class="section-subtitle">Working with TextFormField and Controllers</p>
+                
+                <div style="background: linear-gradient(135deg, rgba(66, 165, 245, 0.1), rgba(19, 185, 253, 0.1)); padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 4px solid var(--primary-color);">
+                    <h2 style="color: var(--primary-color); margin-bottom: 15px;">📝 TextEditingController</h2>
+                    <p style="font-size: 1.05rem; line-height: 1.6;">A controller that manages the text being edited. It lets you read and manipulate the text value.</p>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>🎨 Interactive Color Changer Example</span>
+                        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code class="language-dart">import 'package:flutter/material.dart';
+import 'dart:math';
+
+class ColorChangerScreen extends StatefulWidget {
+  @override
+  State&lt;ColorChangerScreen&gt; createState() => _ColorChangerScreenState();
+}
+
+class _ColorChangerScreenState extends State&lt;ColorChangerScreen&gt; {
+  // Controller for the text field
+  final TextEditingController _nameController = TextEditingController();
+  
+  // Variable to store the background color
+  Color _backgroundColor = Colors.white;
+  
+  // Variable to store the entered name
+  String _displayName = '';
+  
+  // Function to generate random color
+  void _changeColorRandomly() {
+    setState(() {
+      _backgroundColor = Color.fromRGBO(
+        Random().nextInt(256),  // Red: 0-255
+        Random().nextInt(256),  // Green: 0-255
+        Random().nextInt(256),  // Blue: 0-255
+        1.0,                    // Opacity: 1.0 (fully opaque)
+      );
+      // Get the text from controller
+      _displayName = _nameController.text;
+    });
+  }
+  
+  // Clean up controller when widget is disposed
+  @override
+  void dispose() {
+    _nameController.dispose();
+    super.dispose();
+  }
+  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Color Changer'),
+        backgroundColor: Colors.blue,
+      ),
+      // Use the background color variable
+      backgroundColor: _backgroundColor,
+      body: Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Display name if entered
+            if (_displayName.isNotEmpty)
+              Text(
+                'Hello, $_displayName!',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  shadows: [
+                    Shadow(
+                      blurRadius: 10.0,
+                      color: Colors.black,
+                      offset: Offset(2.0, 2.0),
+                    ),
+                  ],
+                ),
+              ),
+            SizedBox(height: 30),
+            
+            // TextFormField with controller
+            TextFormField(
+              controller: _nameController,
+              decoration: InputDecoration(
+                labelText: 'Enter your name',
+                hintText: 'Type here...',
+                prefixIcon: Icon(Icons.person),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                filled: true,
+                fillColor: Colors.white,
+              ),
+              style: TextStyle(fontSize: 18),
+            ),
+            
+            SizedBox(height: 20),
+            
+            // Button to change color
+            ElevatedButton.icon(
+              onPressed: _changeColorRandomly,
+              icon: Icon(Icons.color_lens),
+              label: Text(
+                'Change Background Color',
+                style: TextStyle(fontSize: 18),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 32,
+                  vertical: 16,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+            ),
+            
+            SizedBox(height: 20),
+            
+            // Info text
+            Container(
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.black.withOpacity(0.3),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Text(
+                '💡 Tip: Enter your name and click the button to change the background color randomly!',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.white,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}</code></pre>
+                </div>
+                
+                <div style="background: #fff3cd; padding: 20px; border-radius: 12px; margin-top: 25px; border-left: 4px solid #ffc107;">
+                    <h3 style="color: #856404; margin-bottom: 15px;">🔑 Key Concepts</h3>
+                    <ul style="color: #856404; font-size: 0.95rem;">
+                        <li><strong>TextEditingController:</strong> Manages the text being edited</li>
+                        <li><strong>controller.text:</strong> Gets the current text value</li>
+                        <li><strong>setState():</strong> Updates the UI when state changes</li>
+                        <li><strong>dispose():</strong> Clean up controller to prevent memory leaks</li>
+                        <li><strong>Random():</strong> Generate random numbers for RGB values</li>
+                        <li><strong>Color.fromRGBO():</strong> Create colors from RGB values</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 18: State Management Basics -->
+        <section class="slide" data-slide="18">
             <div class="content">
                 <h1>🎯 State Management</h1>
                 <p class="section-subtitle">Click on a solution to see its implementation</p>
@@ -1240,8 +1409,8 @@ class MyApp extends StatelessWidget {
             </div>
         </section>
 
-        <!-- Slide 18: Useful Packages -->
-        <section class="slide" data-slide="18">
+        <!-- Slide 19: Useful Packages -->
+        <section class="slide" data-slide="19">
             <div class="content">
                 <h1>📦 Popular Flutter Packages</h1>
                 <div class="packages-grid">
@@ -1299,8 +1468,8 @@ flutter pub get</code></pre>
             </div>
         </section>
 
-        <!-- Slide 19: Best Practices -->
-        <section class="slide" data-slide="19">
+        <!-- Slide 20: Best Practices -->
+        <section class="slide" data-slide="20">
             <div class="content">
                 <h1>⭐ Best Practices</h1>
                 <div class="best-practices-list">
@@ -1364,8 +1533,8 @@ flutter pub get</code></pre>
             </div>
         </section>
 
-        <!-- Slide 20: Resources -->
-        <section class="slide" data-slide="20">
+        <!-- Slide 21: Resources -->
+        <section class="slide" data-slide="21">
             <div class="content">
                 <h1>📚 Learning Resources</h1>
                 <div class="resources-grid">
@@ -1409,8 +1578,434 @@ flutter pub get</code></pre>
             </div>
         </section>
 
-        <!-- Slide 21: Hands-On Activity -->
-        <section class="slide" data-slide="21">
+        <!-- Slide 22: Login & Signup Activity -->
+        <section class="slide" data-slide="22">
+            <div class="content">
+                <h1>🔐 Final Activity: Login & Signup App</h1>
+                <p class="section-subtitle">Create a complete authentication UI</p>
+                
+                <div style="background: linear-gradient(135deg, rgba(66, 165, 245, 0.1), rgba(19, 185, 253, 0.1)); padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 4px solid var(--primary-color);">
+                    <h2 style="color: var(--primary-color); margin-bottom: 15px;">📱 App Structure</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+                        <div style="background: white; padding: 20px; border-radius: 8px;">
+                            <h3 style="color: #333; margin-bottom: 10px;">🏠 Login Screen</h3>
+                            <ul style="list-style: none; padding-left: 0; color: #666; font-size: 0.95rem;">
+                                <li>✓ Email TextField</li>
+                                <li>✓ Password TextField</li>
+                                <li>✓ Login Button</li>
+                                <li>✓ "Sign Up" link at bottom</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 8px;">
+                            <h3 style="color: #333; margin-bottom: 10px;">📝 Signup Screen</h3>
+                            <ul style="list-style: none; padding-left: 0; color: #666; font-size: 0.95rem;">
+                                <li>✓ Name TextField</li>
+                                <li>✓ Email TextField</li>
+                                <li>✓ Password TextField</li>
+                                <li>✓ Sign Up Button</li>
+                                <li>✓ "Login" link at bottom</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 8px;">
+                            <h3 style="color: #333; margin-bottom: 10px;">🎉 Home Screen</h3>
+                            <ul style="list-style: none; padding-left: 0; color: #666; font-size: 0.95rem;">
+                                <li>✓ Welcome message</li>
+                                <li>✓ Display user name</li>
+                                <li>✓ Logout button</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>🔐 Complete Boilerplate Code</span>
+                        <button class="copy-code-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code class="language-dart">import 'package:flutter/material.dart';
+
+void main() => runApp(MyAuthApp());
+
+class MyAuthApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Login & Signup Demo',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => LoginScreen(),
+        '/signup': (context) => SignupScreen(),
+        '/home': (context) => HomeScreen(),
+      },
+    );
+  }
+}
+
+// ========== LOGIN SCREEN ==========
+class LoginScreen extends StatefulWidget {
+  @override
+  State&lt;LoginScreen&gt; createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State&lt;LoginScreen&gt; {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+  void _login() {
+    String email = _emailController.text;
+    String password = _passwordController.text;
+    
+    if (email.isNotEmpty && password.isNotEmpty) {
+      // Navigate to home screen
+      Navigator.pushReplacementNamed(
+        context,
+        '/home',
+        arguments: {'email': email},
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Please fill all fields')),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue[50],
+      body: Center(
+        child: SingleChildScrollView(
+          padding: EdgeInsets.all(32),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.lock_outline, size: 80, color: Colors.blue),
+              SizedBox(height: 20),
+              Text(
+                'Welcome Back!',
+                style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue[900],
+                ),
+              ),
+              SizedBox(height: 40),
+              
+              // Email TextField
+              TextField(
+                controller: _emailController,
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  prefixIcon: Icon(Icons.email),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+                keyboardType: TextInputType.emailAddress,
+              ),
+              SizedBox(height: 16),
+              
+              // Password TextField
+              TextField(
+                controller: _passwordController,
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  prefixIcon: Icon(Icons.lock),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+                obscureText: true,
+              ),
+              SizedBox(height: 24),
+              
+              // Login Button
+              SizedBox(
+                width: double.infinity,
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: _login,
+                  child: Text('Login', style: TextStyle(fontSize: 18)),
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 16),
+              
+              // Sign Up Link
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Don't have an account? "),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, '/signup');
+                    },
+                    child: Text('Sign Up'),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ========== SIGNUP SCREEN ==========
+class SignupScreen extends StatefulWidget {
+  @override
+  State&lt;SignupScreen&gt; createState() => _SignupScreenState();
+}
+
+class _SignupScreenState extends State&lt;SignupScreen&gt; {
+  final _nameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+  void _signup() {
+    String name = _nameController.text;
+    String email = _emailController.text;
+    String password = _passwordController.text;
+    
+    if (name.isNotEmpty && email.isNotEmpty && password.isNotEmpty) {
+      // Navigate to home screen
+      Navigator.pushReplacementNamed(
+        context,
+        '/home',
+        arguments: {'name': name, 'email': email},
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Please fill all fields')),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue[50],
+      body: Center(
+        child: SingleChildScrollView(
+          padding: EdgeInsets.all(32),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.person_add_outlined, size: 80, color: Colors.blue),
+              SizedBox(height: 20),
+              Text(
+                'Create Account',
+                style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue[900],
+                ),
+              ),
+              SizedBox(height: 40),
+              
+              // Name TextField
+              TextField(
+                controller: _nameController,
+                decoration: InputDecoration(
+                  labelText: 'Full Name',
+                  prefixIcon: Icon(Icons.person),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16),
+              
+              // Email TextField
+              TextField(
+                controller: _emailController,
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  prefixIcon: Icon(Icons.email),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+                keyboardType: TextInputType.emailAddress,
+              ),
+              SizedBox(height: 16),
+              
+              // Password TextField
+              TextField(
+                controller: _passwordController,
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  prefixIcon: Icon(Icons.lock),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+                obscureText: true,
+              ),
+              SizedBox(height: 24),
+              
+              // Sign Up Button
+              SizedBox(
+                width: double.infinity,
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: _signup,
+                  child: Text('Sign Up', style: TextStyle(fontSize: 18)),
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 16),
+              
+              // Login Link
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Already have an account? "),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, '/login');
+                    },
+                    child: Text('Login'),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ========== HOME SCREEN (After Login/Signup) ==========
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)?.settings.arguments as Map?;
+    String displayName = args?['name'] ?? args?['email'] ?? 'User';
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Home'),
+        automaticallyImplyLeading: false,
+      ),
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.all(32),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.check_circle_outline,
+                size: 100,
+                color: Colors.green,
+              ),
+              SizedBox(height: 30),
+              Text(
+                'Welcome!',
+                style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue[900],
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Hello, $displayName!',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.grey[700],
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 40),
+              Text(
+                '🎉 You have successfully logged in!',
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 60),
+              
+              // Logout Button
+              ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, '/login');
+                },
+                icon: Icon(Icons.logout),
+                label: Text('Logout'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  foregroundColor: Colors.white,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 32,
+                    vertical: 16,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}</code></pre>
+                </div>
+                
+                <div style="background: #d1ecf1; padding: 20px; border-radius: 12px; margin-top: 20px; border-left: 4px solid #0c5460;">
+                    <h3 style="color: #0c5460; margin-bottom: 15px;">💡 What This App Does</h3>
+                    <ul style="color: #0c5460; font-size: 0.95rem;">
+                        <li>✅ <strong>Login Screen:</strong> User enters email and password</li>
+                        <li>✅ <strong>Signup Screen:</strong> New user creates account with name, email, and password</li>
+                        <li>✅ <strong>Navigation:</strong> Switch between login/signup screens</li>
+                        <li>✅ <strong>Home Screen:</strong> Shows welcome message after successful login/signup</li>
+                        <li>✅ <strong>Data Passing:</strong> User info is passed between screens</li>
+                        <li>✅ <strong>Validation:</strong> Checks if fields are not empty</li>
+                        <li>✅ <strong>Logout:</strong> Returns to login screen</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 23: Hands-On Activity -->
+        <section class="slide" data-slide="23">
             <div class="content">
                 <h1>🎯 Hands-On Activity: Build Your First App!</h1>
                 <p class="section-subtitle">Let's create a simple app with navigation</p>
@@ -1584,8 +2179,8 @@ class FavoritesScreen extends StatelessWidget {
             </div>
         </section>
 
-        <!-- Slide 22: Thank You -->
-        <section class="slide" data-slide="22">
+        <!-- Slide 24: Thank You -->
+        <section class="slide" data-slide="24">
             <div class="content">
                 <h1 class="title-animated">🎉 Ready to Build Amazing Apps!</h1>
                 <div class="thank-you-content">
@@ -1601,17 +2196,7 @@ class FavoritesScreen extends StatelessWidget {
                         </ul>
                     </div>
                     <div class="flutter-logo-end">
-                        <svg class="flutter-icon" viewBox="0 0 256 317" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="flutterGradient2" x1="3.952%" y1="26.993%" x2="75.897%" y2="52.919%">
-                                    <stop offset="0%" stop-color="#13B9FD"/>
-                                    <stop offset="100%" stop-color="#0278D4"/>
-                                </linearGradient>
-                            </defs>
-                            <polygon fill="url(#flutterGradient2)" points="157.666 0 0 157.666 48.8 206.5 255.5 0"/>
-                            <polygon fill="#02569B" fill-opacity="0.85" points="156.567 145.396 72.166 229.796 121.0 278.6 170.8 229.796 255.2 145.396"/>
-                            <polygon fill="#13B9FD" points="121.0 279.7 170.8 229.796 121.0 179.9"/>
-                        </svg>
+                        <img src="flutter_logo.png" alt="Flutter Logo" style="width: 180px; height: 180px; object-fit: contain;">
                     </div>
                     <p class="motto">Happy Coding! 💙</p>
                 </div>
@@ -1625,11 +2210,14 @@ class FavoritesScreen extends StatelessWidget {
             <span>← Previous</span>
         </button>
         <div class="slide-indicator">
-            <span id="currentSlide">1</span> / <span id="totalSlides">22</span>
+            <span id="currentSlide">1</span> / <span id="totalSlides">24</span>
         </div>
         <button class="nav-btn" id="nextBtn" onclick="nextSlide()">
             <span>Next →</span>
         </button>
+        <a href="index.html" class="nav-btn" style="text-decoration: none; background: #ffffff; color: var(--primary-color); border: 2px solid var(--primary-color); margin-left: 15px;">
+            <span>🏠 Home</span>
+        </a>
     </div>
 
     <!-- Progress Bar -->

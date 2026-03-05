@@ -1,6 +1,21 @@
 // Presentation JavaScript
 let currentSlide = 1;
-const totalSlides = 22;
+const totalSlides = 24;
+
+// Check if content is scrollable
+function checkScrollable() {
+    const slides = document.querySelectorAll('.slide.active');
+    slides.forEach(slide => {
+        const content = slide.querySelector('.content');
+        if (content) {
+            if (content.scrollHeight > content.clientHeight) {
+                content.classList.add('has-scroll');
+            } else {
+                content.classList.remove('has-scroll');
+            }
+        }
+    });
+}
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,6 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSlide();
     createSlideDots();
     updateProgress();
+    checkScrollable();
+    
+    // Check scrollable on resize
+    window.addEventListener('resize', checkScrollable);
     
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
@@ -60,7 +79,7 @@ function updateSlide() {
         'transition-zoom',          // Slide 4
         'transition-slide-left',    // Slide 5
         'transition-flip',          // Slide 6
-        'transition-rotate',        // Slide 7 (NEW: Running Application)
+        'transition-rotate',        // Slide 7
         'transition-bounce',        // Slide 8
         'transition-diagonal',      // Slide 9
         'transition-fade',          // Slide 10
@@ -73,7 +92,11 @@ function updateSlide() {
         'transition-diagonal',      // Slide 17
         'transition-bounce',        // Slide 18
         'transition-slide-left',    // Slide 19
-        'transition-zoom'           // Slide 20
+        'transition-zoom',          // Slide 20
+        'transition-fade',          // Slide 21
+        'transition-rotate',        // Slide 22
+        'transition-slide-right',   // Slide 23
+        'transition-zoom'           // Slide 24
     ];
     
     slides.forEach((slide, index) => {
@@ -113,6 +136,9 @@ function updateSlide() {
     
     updateProgress();
     updateDots();
+    
+    // Check if content is scrollable after slide change
+    setTimeout(checkScrollable, 100);
 }
 
 function nextSlide() {
@@ -930,10 +956,10 @@ function initializeWidgetExplorers() {
                 
                 // Determine which category (layout, ui, interactive, statemanagement)
                 let category = '';
-                if (slideNumber === '12') category = 'layout';
-                else if (slideNumber === '13') category = 'ui';
-                else if (slideNumber === '14') category = 'interactive';
-                else if (slideNumber === '17') category = 'statemanagement';
+                if (slideNumber === '13') category = 'layout';
+                else if (slideNumber === '14') category = 'ui';
+                else if (slideNumber === '15') category = 'interactive';
+                else if (slideNumber === '18') category = 'statemanagement';
                 
                 if (category && widgetType) {
                     updateWidgetCode(category, widgetType, slide);
