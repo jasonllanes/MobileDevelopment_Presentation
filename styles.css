@@ -1616,25 +1616,47 @@ kbd {
 }
 
 /* Responsive Design */
+
+/* Tablets and Small Laptops */
+@media (max-width: 1024px) {
+    .content {
+        max-width: 900px;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .info-cards,
+    .download-grid,
+    .fundamentals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets and Large Mobile */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
     }
 
-    .subtitle {
-        font-size: 1.3rem;
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle, .section-subtitle {
+        font-size: 1.1rem;
     }
 
     .content {
         padding: 15px;
+        width: 95%;
+        max-height: calc(100vh - 200px);
     }
 
     .slide {
-        padding: 30px 15px 100px;
-    }
-
-    .content {
-        max-height: calc(100vh - 110px);
+        padding: 15px 10px 80px;
     }
 
     .info-cards,
@@ -1642,8 +1664,11 @@ kbd {
     .fundamentals-grid,
     .widgets-showcase,
     .packages-grid,
-    .resources-grid {
+    .resources-grid,
+    .auth-methods,
+    .benefits-list {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .two-column-layout {
@@ -1656,18 +1681,30 @@ kbd {
     }
 
     .widget-code-display {
-        min-height: 400px;
+        min-height: 350px;
     }
 
     .controls {
-        bottom: 15px;
-        padding: 10px 20px;
-        gap: 15px;
+        bottom: 10px;
+        padding: 6px 12px;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .nav-btn {
-        padding: 10px 18px;
+        padding: 10px 16px;
+        font-size: 0.85rem;
+        min-width: 80px;
+        min-height: 44px;
+    }
+
+    .slide-indicator {
         font-size: 0.9rem;
+        order: -1;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
     }
 
     .slide-dots {
@@ -1675,12 +1712,148 @@ kbd {
     }
 
     .flutter-icon {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .code-container {
+        margin: 15px 0;
     }
 
     .code-container code {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .code-header {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .copy-code-btn, .copy-btn-small {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+        min-height: 36px;
+    }
+
+    .card, .feature-box, .benefit-item {
+        padding: 15px;
+    }
+
+    .card h3, .feature-box h3 {
+        font-size: 1.1rem;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+
+    .navigation-methods .code-container {
+        margin-bottom: 15px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .subtitle, .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .content {
+        padding: 12px 8px;
+        border-radius: 16px;
+        max-height: calc(100vh - 140px);
+    }
+
+    .slide {
+        padding: 10px 5px 70px;
+    }
+
+    .controls {
+        bottom: 8px;
+        padding: 5px 8px;
+        gap: 6px;
+    }
+
+    .nav-btn {
+        padding: 8px 12px;
         font-size: 0.8rem;
+        min-width: 70px;
+        min-height: 44px;
+    }
+
+    .slide-indicator {
+        font-size: 0.85rem;
+    }
+
+    .code-container code {
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+
+    .flutter-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+    }
+
+    .device-setup,
+    .vs-code-steps,
+    .setup-steps {
+        padding: 15px;
+    }
+
+    pre {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .big-text {
+        font-size: 1.2rem;
+    }
+
+    .next-steps {
+        padding: 20px 15px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .content {
+        padding: 12px 8px;
+    }
+
+    .nav-btn {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        min-width: 60px;
+        min-height: 44px;
+    }
+
+    .code-container code {
+        font-size: 0.65rem;
     }
 }
 

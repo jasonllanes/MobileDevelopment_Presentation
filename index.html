@@ -246,13 +246,49 @@
             to { opacity: 1; }
         }
 
-        @media (max-width: 968px) {
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .header h1 {
+                font-size: 3rem;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .header {
+                margin-bottom: 40px;
+            }
+
             .header h1 {
                 font-size: 2.5rem;
             }
 
             .header p {
                 font-size: 1.1rem;
+            }
+
+            .header > div {
+                flex-direction: column !important;
+                text-align: center !important;
+                padding: 30px 25px !important;
+                max-width: 90% !important;
+            }
+
+            .header > div > div {
+                text-align: center !important;
+            }
+
+            .header > div img {
+                width: 120px !important;
+                height: 120px !important;
             }
 
             .cards-container {
@@ -266,6 +302,83 @@
 
             .card h2 {
                 font-size: 2rem;
+            }
+
+            .card-icon {
+                width: 100px;
+                height: 100px;
+            }
+
+            .card-features li {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .header > div {
+                padding: 25px 20px !important;
+            }
+
+            .header > div h2 {
+                font-size: 1.5rem !important;
+            }
+
+            .header > div p {
+                font-size: 0.95rem !important;
+            }
+
+            .header > div img {
+                width: 100px !important;
+                height: 100px !important;
+            }
+
+            .card {
+                padding: 30px 20px;
+            }
+
+            .card h2 {
+                font-size: 1.8rem;
+            }
+
+            .card p {
+                font-size: 1rem;
+            }
+
+            .card-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .card-features li {
+                font-size: 0.85rem;
+            }
+
+            .card-button {
+                font-size: 1rem;
+                padding: 14px 28px;
+                min-height: 48px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .card h2 {
+                font-size: 1.6rem;
             }
         }
     </style>
